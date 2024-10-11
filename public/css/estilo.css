@@ -1,0 +1,56 @@
+h1 {
+    text-shadow: 3px 3px rgb(0, 0, 0);
+    text-align: center;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    border: solid;
+    border-radius: 30px;
+    border-color: rgb(0, 0, 0);
+    padding: 15px;
+}
+
+a:hover {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-color: white;
+}
+
+body {
+    background-color: #eea4d2;
+    text-align: center;
+
+}
+
+.letra {
+    color: white;
+}
+
+.login {
+    margin-top: 10%;
+
+}
+
+.imagemesquerda {
+    float: left; /* A imagem flutua para a esquerda */
+    margin-right: 15px; /* Adiciona um espaço entre a imagem e o texto */
+    width: 800px; /* Ajusta a largura da imagem */
+  
+   
+}
+/* vai ser mudado com java */
+td{
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+
+}
+table{
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+
+
+}
