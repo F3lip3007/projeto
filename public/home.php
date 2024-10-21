@@ -17,6 +17,22 @@ require_once "../controle/verificalogado.php";
     <h1>Cadastros</h1><br>
 
 
+ 
+  <div class="sidenav">
+    <a href=>./public/autorsql.php</a>
+    <a href="#">./public/clientesql.php</a>
+    <a href="#">./public/editorasql.php</a>
+    <a href="#">./public/funcionariosql.php</a>
+    <a href="#">./public/livrosql.php</a>
+  </div>
+  
+  <div class="content">
+    <h2>Vai ter tabela aqui</h2>
+    <p>Vai ter outra tabela aqui</p>
+  </div>
+
+
+
 
     <a class = "letra" href="./cliente.php" >Cadastrar Cliente</a> <br><br><br><br>
     <a class = "letra" href="./autor.php" >Cadastrar Autor</a> <br><br><br><br>
