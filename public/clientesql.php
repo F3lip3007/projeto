@@ -26,7 +26,11 @@ require_once "../controle/verificalogado.php";
   
             require_once "../controle/conexao.php";
 
+            
             $sql = "SELECT * FROM cliente";
+            $tabe=$_GET['clintesql'];
+            $onde=$_GET['clinte'];
+
 
             $resultados = mysqli_query($conexao, $sql);
 
@@ -46,6 +50,7 @@ require_once "../controle/verificalogado.php";
                 echo "<td>$nome</td>";
                 echo "<td>$telefone</td>";
                 echo "<td>$nascimento</td>";
+                echo "<td><a href='../controle/deletar.php?id=$id'>deletar</td>";
                 echo "</tr>";
 
 
