@@ -21,6 +21,7 @@ require_once "../controle/verificalogado.php";
         <td>funcionario id funcionario</td>
         <td>cliente id cliente </td>
         <td>livro id livro</td>
+        <a href="../controle/pesquisaremprestimo.php"></a>
     </tr>
     <?php
         require_once "../controle/conexao.php";
@@ -50,5 +51,6 @@ require_once "../controle/verificalogado.php";
         echo "</tr>";
         }
         ?>
+          <a href='../controle/pesquisaremprestimo.php'>pesquisar</a>
 </body>
 </html>

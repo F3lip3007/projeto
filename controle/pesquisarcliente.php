@@ -1,3 +1,14 @@
+<?php
+require_once "../controle/verificarlogin.php";
+
+if (isset($_GET['valor'])) {
+    $valor = $_GET['valor'];
+} else {
+    $valor = '';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,19 +40,22 @@
             echo "<table border='1'";
             echo "<tr";
             echo "<td>ID</td>";
-            echo "<td>Nome</td>";
-            echo "<td>CPF</td>";
+            echo "<td>nome</td>";
+            echo "<td>data</td>";
+            echo "<td>cpf</td>";
             echo "<td>Telefone</td>";
 
             while ($linha = mysqli_fetch_array($resultados)){
                $id = $linha['idcliente'];
                $nome = $linha ['nome'];
+               $data = $linha ['data'];
                $cpf = $linha ['cpf'];
                $telefone = $linha['telefone'];
                echo "<tr";
                echo "<td>ID</td>";
-               echo "<td>Nome</td>";
-               echo "<td>CPF</td>";
+               echo "<td>nome</td>";
+               echo "<td>data</td>";
+               echo "<td>cpf</td>";
                echo "<td>Telefone</td>";
             }
         }

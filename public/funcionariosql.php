@@ -23,6 +23,7 @@ require_once "../controle/verificalogado.php";
                 <td>data de nascimento</td>
                 <td>telefone</td>
             </tr>
+            <a href="../controle/pesquisaremprestimo.php"></a>
             <?php
                 require_once "../controle/conexao.php";
 

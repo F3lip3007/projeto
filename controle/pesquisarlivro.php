@@ -1,3 +1,14 @@
+<?php
+require_once "../controle/verificarlogin.php";
+
+if (isset($_GET['valor'])) {
+    $valor = $_GET['valor'];
+} else {
+    $valor = '';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,20 +40,30 @@
             echo "<table border='1'";
             echo "<tr";
             echo "<td>ID</td>";
-            echo "<td>Nome</td>";
-            echo "<td>CPF</td>";
-            echo "<td>Telefone</td>";
+            echo "<td>titulo</td>";
+            echo "<td>dispoivel</td>";
+            echo "<td>idioma</td>";
+            echo "<td>data_de_publicacao</td>";
+            echo "<td>autor_idautor</td>";
+            echo "<td>editora_ideditora</td>";
 
             while ($linha = mysqli_fetch_array($resultados)){
-               $id = $linha['idcliente'];
-               $nome = $linha ['nome'];
-               $cpf = $linha ['cpf'];
-               $telefone = $linha['telefone'];
+               $id = $linha['idlivro'];
+               $titulo = $linha ['titulo'];
+               $disponivel = $linha ['disponivel'];
+               $idioma = $linha['idioma'];
+               $data_de_publicacao = $linha ['data_de_publicacao'];
+               $autor_idautor = $linha ['autor_idautor'];
+               $editora_ideditora= $linha['editora_ideditora'];
                echo "<tr";
                echo "<td>ID</td>";
-               echo "<td>Nome</td>";
-               echo "<td>CPF</td>";
-               echo "<td>Telefone</td>";
+               echo "<td>titulo</td>";
+               echo "<td>dispoivel</td>";
+               echo "<td>idioma</td>";
+               echo "<td>data_de_publicacao</td>";
+               echo "<td>autor_idautor</td>";
+               echo "<td>editora_ideditora</td>";
+   
             }
         }
     }

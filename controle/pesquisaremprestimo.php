@@ -1,3 +1,14 @@
+<?php
+require_once "../controle/verificarlogin.php";
+
+if (isset($_GET['valor'])) {
+    $valor = $_GET['valor'];
+} else {
+    $valor = '';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,20 +40,26 @@
             echo "<table border='1'";
             echo "<tr";
             echo "<td>ID</td>";
-            echo "<td>Nome</td>";
-            echo "<td>CPF</td>";
-            echo "<td>Telefone</td>";
+            echo "<td>devolucao</td>";
+            echo "<td>dia_do_emprestimo</td>";
+            echo "<td>funcionario_idfuncionario</td>";
+            echo "<td>cliente_idcliente</td>";
+            echo "<td>livro_idlivro</td>";
 
             while ($linha = mysqli_fetch_array($resultados)){
-               $id = $linha['idcliente'];
-               $nome = $linha ['nome'];
-               $cpf = $linha ['cpf'];
-               $telefone = $linha['telefone'];
+               $id = $linha['idemprestimo'];
+               $devolucao = $linha ['nome'];
+               $dia_do_emprestimo= $linha ['dia_do_emprestimo'];
+               $funcionario_idfuncionario = $linha['funcionario_idfuncionario'];
+               $cliente_idcliente = $linha['cliente_idcliente'];
+               $livro_idlivro = $linha['livro_idlivro'];
                echo "<tr";
                echo "<td>ID</td>";
-               echo "<td>Nome</td>";
-               echo "<td>CPF</td>";
-               echo "<td>Telefone</td>";
+               echo "<td>devolucao</td>";
+               echo "<td>dia_do_emprestimo</td>";
+               echo "<td>funcionario_idfuncionario</td>";
+               echo "<td>cliente_idcliente</td>";
+               echo "<td>livro_idlivro</td>";
             }
         }
     }
