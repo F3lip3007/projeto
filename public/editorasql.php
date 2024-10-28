@@ -18,12 +18,13 @@ require_once "../controle/verificalogado.php";
             <td>id</td>
             <td>nome</td>
             <td>localidade</td>
+            <a href="../controle/pesquisarcliente.php"></a>
         </tr>
         <?php
         require_once "../controle/conexao.php";
 
         $sql = "SELECT * FROM editora";
-
+        
         $resultados = mysqli_query($conexao, $sql);
 
             while ($linha = mysqli_fetch_array($resultados)) {
@@ -37,7 +38,9 @@ require_once "../controle/verificalogado.php";
                 echo "<td>$localidade</td>";
                 echo "</tr>";
             }
-        ?>
+            
+            ?>
     </table>    
+    <a href='../controle/pesquisarcliente.php'>pesquisar</a>
 </body>
 </html>
