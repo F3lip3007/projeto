@@ -22,9 +22,12 @@ require_once "../controle/verificalogado.php";
         </tr>
 
         <?php
-
-  
             require_once "../controle/conexao.php";
+            $campo = 'idcliente';
+            $tabela= 'cliente';
+            $loc = 'clientesql.php';
+
+
 
             $sql = "SELECT * FROM cliente";
 
@@ -46,11 +49,8 @@ require_once "../controle/verificalogado.php";
                 echo "<td>$nome</td>";
                 echo "<td>$telefone</td>";
                 echo "<td>$nascimento</td>";
+                echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id & campo=$campo & tabela=$tabela & loc=$loc'>deletar</a> <td/>";
                 echo "</tr>";
-
-
-
-                
             }
         ?>
 </body>
