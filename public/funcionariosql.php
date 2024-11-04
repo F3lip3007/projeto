@@ -11,31 +11,19 @@ require_once "../controle/verificalogado.php";
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
-       
+    
+        <h1>Lista de Funcionários</h1>
 
-<?php
-
-
-        echo "<h1>Lista de Funcionários</h1>"
-
-        $cpf = $linha ['cpf'];
-        $telefone = $linha ['telefone'];
-
-        echo '<table>'
-
-            echo "<tr>"
-            echo "<td>id funcionário</td>"
-            echo "<td>nome</td>"
-            echo "<td>cpf</td>"
-            echo "<td>salário</td>"
-            echo "<td>data de nascimento</td>"
-            echo "<td>telefone</td>"
-            echo "</tr>"
-
-
-        echo '</table>';
-
-            echo {
+        <table>
+            <tr>
+                <td>id funcionário</td>
+                <td>nome</td>
+                <td>cpf</td>
+                <td>salário</td>
+                <td>data de nascimento</td>
+                <td>telefone</td>
+            </tr>
+            <?php
                 require_once "../controle/conexao.php";
                 $sql = "SELECT * FROM funcionario WHERE nome LIKE '%valor%'";
                 or cpf LIKE '%valor%' or telefone LIKE '%valor%'

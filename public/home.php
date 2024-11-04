@@ -49,6 +49,7 @@ require_once "../controle/verificalogado.php";
     <a class = "letra" href= "./emprestimosql.php">Listar Emprestimo</a> <br><br><br><br>
     <a class = "letra" href= "./funcionariosql.php">Listar Funcionário</a> <br><br><br><br>
     <a class = "letra" href= "./livrosql.php">Listar Livros</a> <br><br><br><br>
+    <a href="../controle/deslogar.php">Sair</a>
 
 </div>
 </body>
