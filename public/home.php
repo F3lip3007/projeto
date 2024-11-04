@@ -12,7 +12,8 @@ require_once "../controle/verificalogado.php";
     <title>Document</title>
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
-<body>
+<body >
+  <div  class="fundo">
     
     <h1>Cadastros</h1><br>
 
@@ -26,12 +27,6 @@ require_once "../controle/verificalogado.php";
     <a href="#">./public/livrosql.php</a>
   </div>
   
-  <div class="content">
-    <h2>Vai ter tabela aqui</h2>
-    <p>Vai ter outra tabela aqui</p>
-  </div>
-
-
 
 
     <a class = "letra" href="./cliente.php" >Cadastrar Cliente</a> <br><br><br><br>
@@ -50,7 +45,7 @@ require_once "../controle/verificalogado.php";
     <a class = "letra" href= "./funcionariosql.php">Listar Funcionário</a> <br><br><br><br>
     <a class = "letra" href= "./livrosql.php">Listar Livros</a> <br><br><br><br>
     <a href="../controle/deslogar.php">Sair</a>
-
+    </div>
 </div>
 </body>
 </html>

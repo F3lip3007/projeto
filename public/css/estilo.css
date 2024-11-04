@@ -19,13 +19,13 @@ a:hover {
 }
 
 body {
-    /* background-color: #d6d0d4;*/
-  text-align: center; 
-  
+    background-color: #ffffff;
+    text-align: center;
+
 }
 
 .letra {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .login {
@@ -97,7 +97,6 @@ a{
     padding-left: 20px;
   }
   
-<<<<<<< Updated upstream
  .decoracao{
   font-family: Arial, Helvetica, sans-serif; /*fonte do texto*/
   border-collapse: collapse;/*tipo de borda*/
@@ -120,20 +119,14 @@ a{
     background-color: #415dc3;
     color: white;
   }
-=======
- #body {
-    background-image: url('public/fundo.jpg'); /* Caminho para a imagem de fundo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Faz a div ocupar a altura total da janela */
+
+.fundo{
+  background-image: url('../public/assets/fundo.jpg');
+  background-size: cover; /* Faz com que a imagem cubra todo o elemento */
+  background-repeat: no-repeat;
+  
 }
-
-
-
  
->>>>>>> Stashed changes
-
 
 
   
