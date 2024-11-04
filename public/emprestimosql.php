@@ -13,14 +13,14 @@ require_once "../controle/verificalogado.php";
 <body>
 <h1>Lista de Empréstimos</h1>
 
-<table  >
+<table class= decoracao >
     <tr>
-        <td>id empréstimo</td>
-        <td>devolução</td>
-        <td>dia do empréstimo</td>           
-        <td>funcionario id funcionario</td>
-        <td>cliente id cliente </td>
-        <td>livro id livro</td>
+        <th>id empréstimo</th>
+        <th>devolução</th>
+        <th>dia do empréstimo</th>           
+        <th>funcionario id funcionario</th>
+        <th>cliente id cliente </th>
+        <th>livro id livro</th>
         <a href="../controle/pesquisaremprestimo.php"></a>
     </tr>
     <?php

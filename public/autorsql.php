@@ -12,12 +12,12 @@ require_once "../controle/verificalogado.php";
 <head>
 <body>
     <h1>Lista autor</h1>
-    <table>
+    <table class= decoracao>
         <tr>
-            <td>idautor</td>
-            <td>nome</td>
-            <td>nacionalidade</td>
-            <td>data_de_nascimento</td>
+            <th>idautor</th>
+            <th>nome</th>
+            <th>nacionalidade</th>
+            <th>data_de_nascimento</th>
         </tr>
         <?php
 

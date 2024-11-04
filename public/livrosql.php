@@ -11,16 +11,16 @@
 <body>
     <h1>Lista de Livros</h1>
 
-    <table>
+    <table  class= decoracao>
         <tr>
-            <td>genero</td>
-            <td>titulo</td>
-            <td>disponivel</td>
-            <td>idioma</td>
-            <td>data de publicação</td>
-            <td>idioma</td>
-            <td>autor</td>
-            <td>editora</td>
+            <th>genero</th>
+            <th>titulo</th>
+            <th>disponivel</th>
+            <th>idioma</th>
+            <th>data de publicação</th>
+            <th>idioma</th>
+            <th>autor</th>
+            <th>editora</th>
         </tr>
         <?php
 

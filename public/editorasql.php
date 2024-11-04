@@ -13,11 +13,11 @@ require_once "../controle/verificalogado.php";
 <body>
     <h1>Lista de Editoras</h1>
 
-    <table>
+    <table class= decoracao>
         <tr>
-            <td>id</td>
-            <td>nome</td>
-            <td>localidade</td>
+            <th>id</th>
+            <th>nome</th>
+            <th>localidade</th>
             <a href="../controle/pesquisarcliente.php"></a>
         </tr>
         <?php

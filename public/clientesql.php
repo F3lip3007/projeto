@@ -12,13 +12,13 @@ require_once "../controle/verificalogado.php";
 </head>
 <body>
     <h1>Lista de clientes</h1>
-    <table>
+    <table class= decoracao>
        <tr>
-            <td>idcliente</td>
-            <td>cpf</td>
-            <td>telefone</td>
-            <td>nome</td>
-            <td>data_de_nascimento</td>
+            <th>idcliente</th>
+            <th>cpf</th>
+            <th>telefone</th>
+            <th>nome</th>
+            <th>data_de_nascimento</th>
         </tr>
 
         <?php
