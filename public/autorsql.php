@@ -33,6 +33,14 @@ require_once "../controle/verificalogado.php";
             $nacionalidade = $linha ['nacionalidade'];
             $nascimento = $linha ['data_de_nascimento'];    
 
+            if ($id == $idautor) {
+                $selecionado = 'selected';
+            } else {
+                $selecionado = '';
+            }
+
+            echo "<option value='$id' $selecionado>$nome</option>";
+
 
 
             echo "<tr>";
@@ -45,5 +53,8 @@ require_once "../controle/verificalogado.php";
 
         }
         ?>
+    
+
+
 </body>
 </html>

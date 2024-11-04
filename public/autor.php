@@ -17,17 +17,17 @@ require_once "../controle/verificalogado.php";
 
 
 
-    <form action="../controle/autor.php" method="GET">
+     <form action="../controle/autor.php?id=<?php echo $id; ?>" method="post"> 
         <h3>Nome do autor:</h3> <br>
-        <input type="text" name="nome"> <br><br>
+        <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>"> <br><br>
 
         <h3>Nacionalidade:</h3><br>
-        <input type="text" name="nacionalidade"> <br> <br>
+        <input type="text" name="nacionalidade" class="form-control" value="<?php echo $nacionalidade; ?>"> <br> <br>
 
         <h3>Data de nascimento:</h3><br>
-        <input type="date" name="data_de_nascimento"> <br> <br>
+        <input type="date" name="data_de_nascimento" class="form-control" value="<?php echo $data_de_nascimento; ?>"> <br> <br>
 
-        <input type="submit" value="Cadastrar">
+        <input type="submit" value="<?php echo $botao; ?>" class="btn btn-primary">
 
     </form>
 
