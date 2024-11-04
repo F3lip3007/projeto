@@ -42,6 +42,7 @@ require_once "../controle/verificalogado.php";
                 or endereco LIKE '%valor%'";
                 $resultados = mysqli_query($conexao, sql);
 
+                
                 if (mysqli_num_rows($resultados) > 0){
                     echo "<tr>";
                     echo "<td>$id</td>";
@@ -51,6 +52,7 @@ require_once "../controle/verificalogado.php";
                     echo "<td>$data_de_nascimento</td>";
                     echo "<td>$telefone</td>";
                     echo "</tr>";
+
 
                     while ($linha = mysqli_fetch_array($resultados)) {
                         $id = $linha["idfuncionario"];
