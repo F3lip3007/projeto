@@ -14,6 +14,7 @@ require_once "../controle/verificalogado.php";
     
         <h1>Lista de Funcionários</h1>
 
+<<<<<<<<< Temporary merge branch 1
         <table>
             <tr>
                 <td>id funcionário</td>
@@ -23,13 +24,40 @@ require_once "../controle/verificalogado.php";
                 <td>data de nascimento</td>
                 <td>telefone</td>
             </tr>
+            <a href="../controle/pesquisaremprestimo.php"></a>
             <?php
+=========
+<?php
+
+
+        echo "<h1>Lista de Funcionários</h1>"
+
+        $cpf = $linha ['cpf'];
+        $telefone = $linha ['telefone'];
+
+        echo '<table>'
+
+            echo "<tr>"
+            echo "<td>id funcionário</td>"
+            echo "<td>nome</td>"
+            echo "<td>cpf</td>"
+            echo "<td>salário</td>"
+            echo "<td>data de nascimento</td>"
+            echo "<td>telefone</td>"
+            echo "</tr>"
+
+
+        echo '</table>';
+
+            echo {
+>>>>>>>>> Temporary merge branch 2
                 require_once "../controle/conexao.php";
                 $sql = "SELECT * FROM funcionario WHERE nome LIKE '%valor%'";
                 or cpf LIKE '%valor%' or telefone LIKE '%valor%'
                 or endereco LIKE '%valor%'";
                 $resultados = mysqli_query($conexao, sql);
 
+                
                 if (mysqli_num_rows($resultados) > 0){
                     echo "<tr>";
                     echo "<td>$id</td>";
@@ -39,6 +67,7 @@ require_once "../controle/verificalogado.php";
                     echo "<td>$data_de_nascimento</td>";
                     echo "<td>$telefone</td>";
                     echo "</tr>";
+
 
                     while ($linha = mysqli_fetch_array($resultados)) {
                         $id = $linha["idfuncionario"];
