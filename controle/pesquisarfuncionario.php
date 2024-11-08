@@ -17,7 +17,7 @@ if (isset($_GET['valor'])) {
     <title>Document</title>
 </head>
 <body>
-    <form> action="pesquisar.php" method="get">
+    <form action="../controle/pesquisarfuncionario.php" method="$_GET">
         Campo: <br>
         <input type= "text" name="valor" value="<?php echo $valor; ?>"> <br><br>
 
@@ -30,7 +30,7 @@ if (isset($_GET['valor'])) {
         $valor = $_GET['valor'];
 
         require_once "../controle/conexao.php";
-        $sql = "SELECT * FROM paciente WHERE nome LIKE '%$valor%'";
+        $sql = "SELECT * FROM cliente WHERE nome LIKE '%$valor%'";
         $resultados = mysqli_query($conexao, $sql);
     
         if (mysqli_num_rows($resultados) == 0) {
