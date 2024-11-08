@@ -21,7 +21,7 @@ require_once "../controle/verificalogado.php";
         </tr>
         <?php
 
-        require_once "../controle/conexao.php";
+        require_once "../controle/conexao.php";    
 
         $sql = "SELECT * FROM autor";
 
@@ -50,11 +50,9 @@ require_once "../controle/verificalogado.php";
             echo "<td>$nascimento</td>";
             echo "</tr>";
 
-
         }
         ?>
-    
-
+        <a class = "letra" href="./persquisar.php" >pesquisar</a>
 
 </body>
 </html>
