@@ -12,6 +12,7 @@ require_once "../controle/verificalogado.php";
 <head>
 <body>
     <h1>Lista autor</h1>
+    <a class = "letra" href="../controle/pesquisarautor.php" >pesquisar</a>
     <table class= decoracao>
         <tr>
             <th>idautor</th>
@@ -21,19 +22,24 @@ require_once "../controle/verificalogado.php";
         </tr>
         <?php
 
-        require_once "../controle/conexao.php";    
+        require_once "../controle/conexao.php";
+        $campo = 'idcliente';
+        $tabela= 'cliente';
+        $loc = 'clientesql.php';
+
 
         $sql = "SELECT * FROM autor";
 
         $resultados = mysqli_query($conexao,$sql);
 
         while ($linha = mysqli_fetch_array($resultados)) {
+            
             $id = $linha ['idautor'];
             $nome = $linha ['nome'];
             $nacionalidade = $linha ['nacionalidade'];
             $nascimento = $linha ['data_de_nascimento'];    
 
-            if ($id == $idautor) {
+            if ($id == $id) {
                 $selecionado = 'selected';
             } else {
                 $selecionado = '';
@@ -48,11 +54,11 @@ require_once "../controle/verificalogado.php";
             echo "<td>$nome</td>";
             echo "<td>$nacionalidade</td>";
             echo "<td>$nascimento</td>";
+            echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>deletar</a><td/>";
             echo "</tr>";
 
         }
         ?>
-        <a class = "letra" href="./persquisar.php" >pesquisar</a>
 
 </body>
 </html>

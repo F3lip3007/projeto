@@ -1,5 +1,5 @@
 <?php
-require_once "../controle/verificarlogin.php";
+require_once "../controle/verificalogado.php";
 
 if (isset($_GET['valor'])) {
     $valor = $_GET['valor'];

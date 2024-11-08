@@ -19,7 +19,6 @@ if (isset($_SESSION['logado'])){
 
 <head>
 <body>
-    
 
     
     <form action="../controle/verificarlogin.php" method="post">
