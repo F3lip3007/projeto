@@ -36,6 +36,8 @@ require_once "../controle/verificalogado.php";
                 echo "<td>$id</td>";
                 echo "<td>$nome</td>";
                 echo "<td>$localidade</td>";
+                echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>deletar</a><td/>";
+                echo "<td> <a class = 'letra' href='../controle/editareditora.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>editar</a><td/>";
                 echo "</tr>";
             }
             
