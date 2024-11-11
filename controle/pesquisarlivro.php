@@ -26,15 +26,16 @@ if (isset($_GET['valor'])) {
 
     <?php 
     
-    if (isset($GET['valor'])) {
+    if (isset($_GET['valor'])) {
         require_once "../controle/conexao.php";
         $valor = $_GET['valor'];
-        $sql = "SELECT * FROM livro WHERE nome LIKE '%$valor%'";
-        $resultados = mysqli_query($conexao, $sql);
+        $sql = "SELECT * FROM livro WHERE titulo LIKE '%$valor%'";
+        $resultados = mysqli_query($conexao,$sql);
     
         if (mysqli_num_rows($resultados) == 0) {
             echo "Não foram encontrados resultados.";
 
+            
         } else {
             echo "<table border='1'";
             echo "<tr";
