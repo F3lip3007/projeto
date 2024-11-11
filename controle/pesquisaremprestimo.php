@@ -30,7 +30,7 @@ if (isset($_GET['valor'])) {
         $valor = $_GET['valor'];
 
         require_once "../controle/conexao.php";
-        $sql = "SELECT * FROM cliente WHERE nome LIKE '%$valor%'";
+        $sql = "SELECT * FROM emprestimo WHERE nome LIKE '%$valor%'";
         $resultados = mysqli_query($conexao, $sql);
     
         if (mysqli_num_rows($resultados) == 0) {

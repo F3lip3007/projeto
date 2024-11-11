@@ -26,11 +26,10 @@ if (isset($_GET['valor'])) {
 
     <?php 
     
-    if (isset($GET['valor'])) {
-        $valor = $_GET['valor'];
-
+    if (isset($_GET['valor'])) {
         require_once "../controle/conexao.php";
-        $sql = "SELECT * FROM cliente WHERE nome LIKE '%$valor%'";
+        $valor = $_GET['valor'];
+        $sql = "SELECT * FROM funcionario WHERE nome LIKE '%$valor%'";
         $resultados = mysqli_query($conexao, $sql);
     
         if (mysqli_num_rows($resultados) == 0) {
@@ -39,12 +38,13 @@ if (isset($_GET['valor'])) {
         } else {
             echo "<table border='1'";
             echo "<tr";
-            echo "<td>ID</td>";
+            echo "<td>id</td>";
             echo "<td>nome</td>";
             echo "<td>cpf</td>";
             echo "<td>salario</td>";
             echo "<td>data_de_nascimento</td>";
             echo "<td>telefone</td>";
+            echo "<tr/>";
 
             while ($linha = mysqli_fetch_array($resultados)){
                $id = $linha['idfuncionario'];
@@ -55,12 +55,13 @@ if (isset($_GET['valor'])) {
                $telefone = $linha['telefone'];
 
                echo "<tr";
-               echo "<td>ID</td>";
-               echo "<td>nome</td>";
-               echo "<td>cpf</td>";
-               echo "<td>salario</td>";
-               echo "<td>data_de_nascimento</td>";
-               echo "<td>telefone</td>";
+               echo "<td>$id</td>";
+               echo "<td>$nome</td>";
+               echo "<td>$cpf</td>";
+               echo "<td>$salario</td>";
+               echo "<td>$data_de_nascimento</td>";
+               echo "<td>$telefone</td>";
+               echo "<tr/>";
             }
         }
     }

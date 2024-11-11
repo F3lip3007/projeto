@@ -11,14 +11,14 @@ require_once "../controle/verificalogado.php";
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
-<h1>Lista de Empréstimos</h1>
+<h1>Lista de Funcionários</h1>
 
 <table class= decoracao >
     <tr>
-        <th>id funcionario</th>
+        <th>id funcionário</th>
         <th>nome</th>
         <th>cpf</th>           
-        <th>salario</th>
+        <th>salário</th>
         <th>data de nascimento </th>
         <th>telefone</th>
         <a href="../controle/pesquisarfuncionario.php"></a>
@@ -34,23 +34,23 @@ require_once "../controle/verificalogado.php";
         while ($linha = mysqli_fetch_array($resultados)) {
         $id = $linha['idfuncionario'];
         $nome = $linha['nome'];
-        $cpf = $linha['dia_do_emprestimo'];
-        $funcionario = $linha['funcionario_idfuncionario'];
-        $cliente = $linha["cliente_idcliente"];
-        $livro = $linha["livro_idlivro"];
+        $cpf = $linha['cpf'];
+        $salario = $linha['salario'];
+        $data_de_nascimento = $linha["data_de_nascimento"];
+        $telefone = $linha["telefone"];
 
 
 
         echo "<tr>";
         echo "<td>$id</td>";
-        echo "<td>$devolucao</td>";
-        echo "<td>$dia_do_emprestimo</td>";
-        echo "<td>$funcionario</td>";
-        echo "<td>$cliente</td>";
-        echo "<td>$livro</td>";
+        echo "<td>$nome</td>";
+        echo "<td>$cpf</td>";
+        echo "<td>$salario</td>";
+        echo "<td>$data_de_nascimento</td>";
+        echo "<td>$telefone</td>";
         echo "</tr>";
         }
         ?>
-          <a href='../controle/pesquisaremprestimo.php'>pesquisar</a>
+          <a href='../controle/pesquisarfuncionario.php'>pesquisar</a>
 </body>
 </html>
