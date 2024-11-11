@@ -27,9 +27,8 @@ if (isset($_GET['valor'])) {
     <?php 
     
     if (isset($GET['valor'])) {
-        $valor = $_GET['valor'];
-
         require_once "../controle/conexao.php";
+        $valor = $_GET['valor'];
         $sql = "SELECT * FROM livro WHERE nome LIKE '%$valor%'";
         $resultados = mysqli_query($conexao, $sql);
     
@@ -39,13 +38,14 @@ if (isset($_GET['valor'])) {
         } else {
             echo "<table border='1'";
             echo "<tr";
-            echo "<td>ID</td>";
+            echo "<td>id</td>";
             echo "<td>titulo</td>";
             echo "<td>dispoivel</td>";
             echo "<td>idioma</td>";
             echo "<td>data_de_publicacao</td>";
             echo "<td>autor_idautor</td>";
             echo "<td>editora_ideditora</td>";
+            echo "<tr/>";
 
             while ($linha = mysqli_fetch_array($resultados)){
                $id = $linha['idlivro'];
@@ -56,14 +56,14 @@ if (isset($_GET['valor'])) {
                $autor_idautor = $linha ['autor_idautor'];
                $editora_ideditora= $linha['editora_ideditora'];
                echo "<tr";
-               echo "<td>ID</td>";
-               echo "<td>titulo</td>";
-               echo "<td>dispoivel</td>";
-               echo "<td>idioma</td>";
-               echo "<td>data_de_publicacao</td>";
-               echo "<td>autor_idautor</td>";
-               echo "<td>editora_ideditora</td>";
-   
+               echo "<td>$id</td>";
+               echo "<td>$titulo</td>";
+               echo "<td>$disponivel</td>";
+               echo "<td>$idioma</td>";
+               echo "<td>$data_de_publicacao</td>";
+               echo "<td>$autor_idautor</td>";
+               echo "<td>$editora_ideditora</td>";
+               echo "<tr/>";
             }
         }
     }
