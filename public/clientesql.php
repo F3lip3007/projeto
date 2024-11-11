@@ -56,8 +56,12 @@ require_once "../controle/verificalogado.php";
                 echo "<td>$telefone</td>";
                 echo "<td>$nascimento</td>";
                 echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
+<<<<<<< Updated upstream
                 echo "<td> <a class = 'letra' href='../controle/editarcliente.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Editar</a><td/>";
                 
+=======
+                echo "<td> <a class = 'letra' href='../controle/cliente.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Editar</a><td/>";
+>>>>>>> Stashed changes
                 echo "</tr>";
             }
             

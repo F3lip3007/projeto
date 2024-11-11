@@ -1,4 +1,19 @@
 <?php
+    if (isset($_GET['valor'])) {
+        $$nome = $_GET['valor'];
+    }
+    else {
+        $$nome='';
+    }
+
+
+
+
+?>
+
+
+
+<?php
 require_once "../controle/verificalogado.php";
 
 ?>  
@@ -19,7 +34,7 @@ require_once "../controle/verificalogado.php";
 
     <form action="../controle/cliente.php" method="GET">
         <h3>Nome do cliente:</h3> <br>
-        <input type="text" placeholder="Nome" name="nome_c"> <br><br>
+        <input type="text" placeholder="Nome" name="nome" value="<?php echo $nome;?>> <br><br>
 
         <h3>Data de nascimento:</h3><br>
         <input type="date" name="data_c"> <br> <br>
@@ -33,6 +48,7 @@ require_once "../controle/verificalogado.php";
         <input type="submit" value="Cadastrar">
 
     </form>
+    
 
 </body>
 

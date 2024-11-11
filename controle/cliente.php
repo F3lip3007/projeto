@@ -1,6 +1,6 @@
 <?php
 
-    $nome_c = $_GET['nome_c'];
+    $nome = $_GET['nome'];
     $data_c = $_GET['data_c'];
     $cpf_c = $_GET['cpf_c'];
     $telef_c = $_GET['telef_c'];
@@ -23,7 +23,7 @@
     require_once "./conexao.php";
 
     $sql = "INSERT INTO cliente (nome,data_de_nascimento,cpf,telefone) 
-    VALUES ('$nome_c','$data_c','$cpf_c','$telef_c')";
+    VALUES ('$nome','$data_c','$cpf_c','$telef_c')";
 
     // rodar esse SQL
     mysqli_query($conexao, $sql);
