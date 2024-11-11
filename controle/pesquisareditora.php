@@ -26,10 +26,9 @@ if (isset($_GET['valor'])) {
 
     <?php 
     
-    if (isset($GET['valor'])) {
-        $valor = $_GET['valor'];
-
+    if (isset($_GET['valor'])) {
         require_once "../controle/conexao.php";
+        $valor = $_GET['valor'];
         $sql = "SELECT * FROM editora WHERE nome LIKE '%$valor%'";
         $resultados = mysqli_query($conexao, $sql);
     
@@ -38,19 +37,19 @@ if (isset($_GET['valor'])) {
 
         } else {
             echo "<table border='1'";
-            echo "<tr";
+            echo "<tr>";
             echo "<td>nome</td>";
             echo "<td>localidade</td>";
-            
+            echo "<tr/>";
 
             while ($linha = mysqli_fetch_array($resultados)){
                $id = $linha['ideditora'];
                $nome = $linha ['nome'];
                $localidade = $linha ['localidade'];
-               echo "<tr";
+               echo "<tr>";
                echo "<td>nome</td>";
                echo "<td>localidade</td>";
-               
+               echo "<tr/>";
    
             }
         }

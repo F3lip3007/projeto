@@ -19,13 +19,15 @@ require_once "../controle/verificalogado.php";
             <th>nome</th>
             <th>nacionalidade</th>
             <th>data_de_nascimento</th>
+            <th>deletar</th>
+    
         </tr>
         <?php
 
         require_once "../controle/conexao.php";
-        $campo = 'idcliente';
-        $tabela= 'cliente';
-        $loc = 'clientesql.php';
+        $campo = 'idautor';
+        $tabela= 'autor';
+        $loc = 'autorsql.php';
 
 
         $sql = "SELECT * FROM autor";

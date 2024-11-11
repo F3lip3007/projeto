@@ -18,15 +18,20 @@ if (isset($_GET['valor'])) {
 </head>
 <body>
     <h1>Lista de Editoras</h1>
-
+    <a href='../controle/pesquisareditora.php'>pesquisar</a>
     <table class= decoracao>
         <tr>
             <th>id</th>
             <th>nome</th>
             <th>localidade</th>
+            <th>deletar</th>
+
         </tr>
         <?php
         require_once "../controle/conexao.php";
+        $campo = 'ideditora';
+        $tabela= 'editora';
+        $loc = 'editorasql.php';
 
         $sql = "SELECT * FROM editora";
         
@@ -42,12 +47,12 @@ if (isset($_GET['valor'])) {
                 echo "<td>$nome</td>";
                 echo "<td>$localidade</td>";
                 echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
-                echo "<td> <a class = 'letra' href='../controle/editareditora.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>editar</a><td/>";
+                // echo "<td> <a class = 'letra' href='../controle/editareditora.php?id=$id>editar</a><td/>";
                 echo "</tr>";
             }
             
             ?>
     </table>    
-    <a href='../controle/pesquisarcliente.php'>pesquisar</a>
+  
 </body>
 </html>
