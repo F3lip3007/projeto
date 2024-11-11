@@ -45,8 +45,6 @@ require_once "../controle/verificalogado.php";
                 $selecionado = '';
             }
 
-            echo "<option value='$id' $selecionado>$nome</option>";
-
 
 
             echo "<tr>";
