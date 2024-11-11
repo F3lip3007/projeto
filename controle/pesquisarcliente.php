@@ -44,6 +44,7 @@ if (isset($_GET['valor'])) {
             echo "<td>data</td>";
             echo "<td>cpf</td>";
             echo "<td>Telefone</td>";
+            
 
             while ($linha = mysqli_fetch_array($resultados)){
                $id = $linha['idcliente'];
