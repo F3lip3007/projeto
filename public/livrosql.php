@@ -10,7 +10,7 @@
 
 <body>
     <h1>Lista de Livros</h1>
-
+    <a class = "letra" href="../controle/pesquisarlivro.php" >pesquisar</a>
     <table  class= decoracao>
         <tr>
             <th>genero</th>
