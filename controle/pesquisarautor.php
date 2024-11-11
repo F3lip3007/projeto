@@ -29,7 +29,7 @@ if (isset($_GET['valor'])) {
     if (isset($_GET['valor'])) {
         require_once "../controle/conexao.php";
         $valor = $_GET['valor'];
-        $sql = "SELECT * FROM cliente WHERE nome LIKE '%$valor%'";
+        $sql = "SELECT * FROM autor WHERE nome LIKE '%$valor%'";
         $resultados = mysqli_query($conexao,$sql);
     
         if (mysqli_num_rows($resultados) == 0) {
@@ -46,7 +46,7 @@ if (isset($_GET['valor'])) {
             echo "<tr/>";
 
            
-
+            
             while ($linha = mysqli_fetch_array($resultados)){
 
                 $id = $linha['idautor'];
@@ -59,7 +59,9 @@ if (isset($_GET['valor'])) {
                 echo "<td>$nacionalidade</td>";
                 echo "<td>$data_de_nascimento</td>";
                 echo"<tr/>";
+            
             }
+
                 
         }
     }

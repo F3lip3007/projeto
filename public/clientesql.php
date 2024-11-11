@@ -37,6 +37,8 @@ require_once "../controle/verificalogado.php";
 
             $resultados = mysqli_query($conexao, $sql);
 
+        
+
             while ($linha = mysqli_fetch_array($resultados)) {
                 $id = $linha ['idcliente'];
                 $cpf = $linha ['cpf'];
@@ -55,8 +57,10 @@ require_once "../controle/verificalogado.php";
                 echo "<td>$nascimento</td>";
                 echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
                 echo "<td> <a class = 'letra' href='../controle/editarcliente.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Editar</a><td/>";
+                
                 echo "</tr>";
             }
+            
         ?>
        
     </table>  
