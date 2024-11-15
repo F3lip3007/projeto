@@ -591,6 +591,9 @@ VALUES ('glowingemberlight8561@mail.com','123');
 
 
 
+INSERT INTO  mydb.usuario (email,senha)
+VALUES ('oi@mail.com','321');
+
 
 
 
