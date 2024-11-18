@@ -1,6 +1,6 @@
 <?php
-$nome_ed = $_GET['nome_ed'];
-$loc_ed = $_GET['loc_ed'];
+$nome_editora = $_GET['nome_editora'];
+$localidade_editora = $_GET['loc_ed'];
 
 require_once "./conexao.php";
 

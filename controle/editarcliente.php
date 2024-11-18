@@ -1,24 +1,22 @@
-<?php 
-// se conectar ao banco
-// qual o servidor? qual usuario? qual senha? qual banco
-require_once "../controle/conexao.php";
+<?php
+require_once "./conexao.php";
+$idcliente = $_POST['idcliente'];
+$nome_editora = $_GET['nome_ed'];
+$loc_editora = $_GET[''];
+// conectar o servidor no banco 
+// em que servidor? qual usuario? qual senha? qual banco?
 
-$id = $_GET['id'];
-$cpf = $_POST['cpf'];
-$telefone = $_POST['telefone'];
-$nome = $_POST['nome'];
-$data_de_nascimento = $_POST['data_de_nascimento'];
 
-if ($id == 0) {
-    // criar um comando SQL que grava no banco
-    $sql = "INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento ) VALUES ('cpf', 'telefone', 'nome', 'data_de_nascimento')";
+
+// criar um comando SQL que insere esses dados
+if ($idcliente == 0) {
+    $sql = "INSERT INTO cliente (nome,data_de_nascimento,cpf,telefone) 
+    VALUES ('$nome','$data_de_nascimento','$cpf','$telefone')";
 } else {
-    $sql = "UPDATE cliente SET cpf = '$cpf', telefone = '$telefone', nome = '$nome', data_de_nascimento = '$data_de_nascimento' WHERE idcliente = '$id'";
+    $sql = "UPDATE cliente SET nome = '$nome', data_de_nascimento = '$data_de_nascimento', cpf ='$cpf',telefone ='$telefone' WHERE idcliente = $idcliente";
 }
-
+// rodar esse SQL
 mysqli_query($conexao, $sql);
-// Mandar executar o comando
 
-header("Location: ../public/home.php");
-
-?>
+// vai sozinho pro index
+header("Location: ../public/clientesql.php");

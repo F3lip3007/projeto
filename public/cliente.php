@@ -4,9 +4,9 @@ require_once "../controle/verificalogado.php";
 require_once "../controle/conexao.php"; // Conexão com o banco de dados
 
 // Verifica se existe um ID passado pela URL
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $sql = "SELECT * FROM cliente WHERE idcliente = $id";
+if (isset($_GET['idcliente'])) {
+    $idcliente = $_GET['idcliente'];
+    $sql = "SELECT * FROM cliente WHERE idcliente = $idcliente";
     $resultado = mysqli_query($conexao, $sql);
 
     // Se encontrou o cliente, preenche as variáveis com os dados
@@ -16,6 +16,7 @@ if (isset($_GET['id'])) {
         $telefone = $linha['telefone'];
         $data_de_nascimento = $linha['data_de_nascimento'];
         $botao = "Salvar";
+        $titilo="Editar Cliente";
     } else {
         // Caso o ID não seja encontrado, define valores vazios
         $nome = '';
@@ -23,15 +24,17 @@ if (isset($_GET['id'])) {
         $telefone = '';
         $data_de_nascimento = '';
         $botao = "Cadastrar";
+        $titilo="Cadastro Cliente";
     }
 } else {
     // Se não existir ID, define como novo cadastro
-    $id = 0;
+    $idcliente = 0;
     $nome = '';
     $cpf = '';
     $telefone = '';
     $data_de_nascimento = '';
     $botao = "Cadastrar";
+    $titilo="Cadastro Cliente";
 }
 ?>
 
@@ -41,15 +44,14 @@ if (isset($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro do Cliente</title>
+    <title><?php echo $titilo; ?></title>
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
-
 <body>
-    <h1>Cadastro do Cliente</h1>
+    <h1><?php echo $titilo; ?></h1>
 
-    <form action="../controle/cliente.php" method="POST">
-        <input type="hidden" name="idcliente" value="<?php echo $id; ?>"> <!-- Campo oculto para ID -->
+    <form action="../controle/editarcliente.php" method="POST">
+        <input type="hidden" name="idcliente" value="<?php echo $idcliente; ?>"> <!-- Campo oculto para ID -->
 
         <h3>Nome do cliente:</h3>
         <input type="text" placeholder="Nome" name="nome" value="<?php echo $nome; ?>"> <br><br>

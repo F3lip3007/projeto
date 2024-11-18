@@ -1,21 +1,33 @@
 <?php
- require_once "./conexao.php";
+require_once "./conexao.php";
+$ideditora = $_POST['ideditora'];
+$nome_editora = $_POST['nome_editora'];
+$localidade_editora = $_POST['localidade_editora'];
 
- $id = $_GET['id'];
 
- $nome = $_POST['nome'];
- $localidade = $_POST['localidade'];
+// echo $nome;
+// echo "<br>";
+// echo $data_de_nascimento;
+// echo "<br>";
+// echo $cpf;
+// echo "<br>";
+// echo $telefone;
+// echo "<br>";
 
- if ($id == 0) {
+// conectar o servidor no banco 
+// em que servidor? qual usuario? qual senha? qual banco?
 
-    $sql = "INSERT INTO editora (nome, cpf, telefone) VALUES ('$nome', '$localidade')";
 
- } else {
 
-    $sql = "UPDATE editora SET nome = '$nome', localidade = '$localidade' WHERE ideditora = $id";
+// criar um comando SQL que insere esses dados
+if ($ideditora== 0) {
+    $sql = "INSERT INTO editora(nome,localidade) 
+    VALUES ('$nome_editora','$localidade_editora')";
+} else {
+    $sql = "UPDATE editora SET nome = '$nome_editora',localidade ='$localidade_editora' WHERE ideditora = $ideditora";
+}
+// rodar esse SQL
+mysqli_query($conexao, $sql);
 
- }
-
- mysqli_query(conexao, $sql);
-
- header("Locantion: ../public/home.php");
+// vai sozinho pro index
+header("Location: ../public/editorasql.php");
