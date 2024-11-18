@@ -52,7 +52,7 @@ require_once "../controle/verificalogado.php";
 
                 
                 echo "<tr>";
-                echo "<td>idcliente</td>";
+                echo "<td>$idcliente</td>"; 
                 echo "<td>$cpf</td>";
                 echo "<td>$nome</td>";
                 echo "<td>$telefone</td>";

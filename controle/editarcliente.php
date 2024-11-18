@@ -1,8 +1,12 @@
 <?php
 require_once "./conexao.php";
+$cpf = $_POST['cpf'];
+$telefone = $_POST['telefone'];
+$nome = $_POST['nome'];
+$data_de_nascimento = $_POST['data_de_nascimento'];
 $idcliente = $_POST['idcliente'];
-$nome_editora = $_GET['nome_ed'];
-$loc_editora = $_GET[''];
+// $nome_editora = $_GET['nome_ed'];
+// $loc_editora = $_GET[''];
 // conectar o servidor no banco 
 // em que servidor? qual usuario? qual senha? qual banco?
 
