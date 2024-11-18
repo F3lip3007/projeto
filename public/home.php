@@ -51,11 +51,11 @@ body {
 <body>
 
 <div class="sidenav">
-<iframe  src="homebotao.php" ></iframe>
+  <a href="homecadastro.php">Cadastro</a>
+  <a href="homelistar.php" >Listar</a>
+
 </div>
 
-
-<iframe  src="cliente.php" name="frame" ></iframe>
 <div class="content">
   <h2>CSS Template</h2>
   <p>A full-height, fixed sidenav and content.</p>
