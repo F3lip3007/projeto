@@ -104,7 +104,71 @@ a{
     background-repeat: no-repeat;                 /* A imagem não se repetirá */
     height: 100vh;                                /* A altura será 100% da altura da janela */
     margin: 0;                                    /* Remove qualquer margem padrão */
+
+   
 }
+
+  .body{
+    margin: 0;
+    padding:0;
+    font-family: 'Arial', sans-serif;
+    background: #537d90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .form-container2 {
+    display: flex;
+    width: 900px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba (0, 0, 0, 0.2);
+    overflow: hidden;
+
+}
+
+  .form-box {
+  padding: 40px;
+  width: 60%;
+}
+
+  .tituloc {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 24px;
+  }
+
+  input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgb(172, 222, 252);
+  }
+
+  .form-group{
+    margin-bottom: 20px;
+  }
+
+  .btn-register {
+    background: rgb(33, 140, 228);
+    color: aliceblue;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba (0, 0, 0, 0.1);
+
+  }
+
+  .btn-register:hover {
+    background: rgb(0, 79, 168);
+  }
 
 
   
