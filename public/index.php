@@ -19,27 +19,25 @@ if (isset($_SESSION['logado'])){
 
 <head>
 <body>
-
+    <h1 class= titulobv>Bem vindo a biblioteca<h1>
+    <h1 class= titulobv>Luz do saber</h1><br>
+    <div class= "login-container">
+        <div class="login-box">
+            <div class="user-icon"> </div>
     
     <form action="../controle/verificarlogin.php" method="post">
-        
-        <br><h1>Coloque seu E-mail e sua senha para acessar o site</h1> <br>
 
         <div class="login">
 
         <h3>E-mail:</h3> <br>
-        <input type = "text"name="email"> <br><br>
+        <input type = "text"name="email" class="input-field"> <br><br>
 
         <h3>Senha: </h3> <br>
-        <input type = "password"name="senha"> <br><br>
+        <input type = "password"name="senha" class="input-field"> <br><br>
 
-        <input type="submit">
+        <input type="submit" value="Entrar" class="login-button">
         </div>
 
-        <div class="imagemesquerda">
-
-            <img src = "../public/assets/foto.png">
-        </div>
         <php>
 
     </form>

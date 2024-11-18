@@ -18,11 +18,15 @@ a:hover {
     border-color: white;
 }
 
-body {
-    background-color: #ffffff;
+body { /* Imagem colorida de fundo */
     text-align: center;
-
+    background-image: url('../assets/fundo.jpg');
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
 }
+
+
 
 .letra {
     color: rgb(0, 0, 0);
@@ -33,13 +37,7 @@ body {
 
 }
 
-.imagemesquerda {
-    float: left; /* A imagem flutua para a esquerda */
-    margin-right: 15px; /* Adiciona um espaço entre a imagem e o texto */
-    width: 800px; /* Ajusta a largura da imagem */
-  
-   
-}
+
 /* vai ser mudado com java */
 td{
     border-width: 1px;
@@ -120,13 +118,74 @@ a{
     color: white;
   }
 
-.fundo{
-  background-image: url('../public/assets/fundo.jpg');
-  background-size: cover; /* Faz com que a imagem cubra todo o elemento */
-  background-repeat: no-repeat;
-  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 100%;
 }
- 
 
+  .login-box {
+    background: rgba(255, 255, 255, 0.1);  /*FUNDO TRANSLUCIDO */
+    border-radius: 12px;
+    padding: 20px 30px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 300px;
+    backdrop-filter: blur(10px); /*efeito de vidro fosco */
+
+  }
+
+  .user-icon {
+    background: #9fa5f1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-icon::before {
+   content: "👤"; 
+   font-family: "Glyphicons Halflings"; 
+   font-size: 24px;
+   color: white;
+  }
+
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+    
+      .login-button {
+        background-color: #9fa5f1;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .options a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .login-button:hover { 
+        background-color: #7b7b7b;
+      }
+
+    .titulobv {
+      text-align: center;
+      font-style: italic;
+    }
 
   
