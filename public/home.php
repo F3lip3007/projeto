@@ -1,51 +1,68 @@
-<?php
-require_once "../controle/verificalogado.php";
-
-?>  
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/estilo.css">
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+</style>
 </head>
-<body >
-  <div  class="fundo">
-    
-    <h1>Cadastros</h1><br>
+<body>
 
-
- 
-  <div class="sidenav">
-    <a href=>./public/autorsql.php</a>
-    <a href="#">./public/clientesql.php</a>
-    <a href="#">./public/editorasql.php</a>
-    <a href="#">./public/funcionariosql.php</a>
-    <a href="#">./public/livrosql.php</a>
-  </div>
-  
-
-
-    <a class = "letra" href="./cliente.php" >Cadastrar Cliente</a> <br><br><br><br>
-    <a class = "letra" href="./autor.php" >Cadastrar Autor</a> <br><br><br><br>
-    <a class = "letra" href="./editoras.php" >Cadastrar Editora</a> <br><br><br><br>
-    <a class = "letra" href="./emprestimofor.php" >Cadastrar Empréstimo</a> <br><br><br><br>
-    <a class = "letra" href="./funcionario.php"> Cadastrar Funcionário</a> <br><br><br><br>
-    <a class = "letra" href="./livrosfor.php" >Cadastrar Livro</a> <br><br><br><br>
-
-    <h1>Banco de Dados dos Cadastros</h1><br>
-
-    <a class = "letra" href= "./clientesql.php" >Listar Cliente</a> <br><br><br><br>
-    <a class = "letra" href= "./autorsql.php">Listar Autor</a> <br><br><br><br>
-    <a class = "letra" href= "./editorasql.php">Listar Editora</a> <br><br><br><br>
-    <a class = "letra" href= "./emprestimosql.php">Listar Emprestimo</a> <br><br><br><br>
-    <a class = "letra" href= "./funcionariosql.php">Listar Funcionário</a> <br><br><br><br>
-    <a class = "letra" href= "./livrosql.php">Listar Livros</a> <br><br><br><br>
-    <a href="../controle/deslogar.php">Sair</a>
-    </div>
+<div class="sidenav">
+<iframe  src="homebotao.php" ></iframe>
 </div>
+
+
+<iframe  src="cliente.php" name="frame" ></iframe>
+<div class="content">
+  <h2>CSS Template</h2>
+  <p>A full-height, fixed sidenav and content.</p>
+  <iframe src="" name="frame"></iframe>
+</div>
+
 </body>
 </html>
+
+
