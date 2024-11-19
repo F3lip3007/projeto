@@ -1,6 +1,27 @@
 <?php
 require_once "../controle/verificalogado.php";
 
+require_once "../controle/conexao.php"; 
+if (isset($_GET['idautor'])) {
+    $idcliente = $_GET['idautor'];
+    $sql = "SELECT * FROM autor WHERE idautor = $idautor";
+    $resultado = mysqli_query($conexao , $sql);
+
+
+    if ($linha = mysqli_fetch_array($resultado)) {
+        $nome = $linha['nome'];
+        $nacionalidade = $linha['nacionalidade'];
+        $data_de_nascimento = $linha['data_de_nascimento'];
+        $botao = "Salvar";
+    } else {
+        $nome = '';
+        $nacionalidade = '';
+        $data_de_nascimento = '';
+        $botao = "Cadastrar";
+
+    }
+}
+
 ?>  
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +35,6 @@ require_once "../controle/verificalogado.php";
 
 <body>
     <h1> Cadastro do Autor</h1>
-
-
 
      <form action="../controle/autor.php?id=<?php echo $id; ?>" method="post"> 
         <h3>Nome do autor:</h3> <br>

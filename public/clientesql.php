@@ -16,10 +16,11 @@ require_once "../controle/verificalogado.php";
        <tr>
             <th>idcliente</th>
             <th>cpf</th>
-            <th>telefone</th>
             <th>nome</th>
-            <th>data_de_nascimento</th>
+            <th>telefone</th>
+            <th>data de nascimento</th>
             <th>deletar</th>
+            
 
         </tr>
 

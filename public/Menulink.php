@@ -52,9 +52,6 @@
     <a href="emprestimosql.php" target="conteudo" class="btn btn-gradient">Listar Emprestimo</a><br><br><br><br>
 
 
-    <a href="../controle/deslogar.php" target="conteudo"class="btn btn-gradient">Sair</a><br><br><br><br>
-
-
 
 
 </body>

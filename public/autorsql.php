@@ -20,6 +20,7 @@ require_once "../controle/verificalogado.php";
             <th>nacionalidade</th>
             <th>data_de_nascimento</th>
             <th>deletar</th>
+            <th>editar</th>
     
         </tr>
         <?php

@@ -33,7 +33,7 @@
         #menuToggle {
             position: fixed;
             top: 20px;
-            left: 20px;
+            left: 90%;
             background-color: #000080;
             color: white;
             padding: 10px 20px;
@@ -76,12 +76,53 @@
             border-top: 2px solid rgba(0, 0, 0, 0.1);
             margin-top: auto; /* Fixa no final da página */
         }
-        
+
+    .botao-header {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    }
+
+    .botao-header:hover {
+    background-color: #0056b3;
+}
+
+   /* Botão básico */
+   .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+         /* Botão q fica grande */
+         .btn-gradient {
+            background: linear-gradient(45deg, #000080, #000080);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-gradient:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
     </style>
 </head>
 <body>
 
-    <header>Menu Principal</header>
+    <header> Biblioteca Luz do Saber</header>
+
 
     <iframe name="conteudo"  width="100%" height="100%"></iframe>
     
@@ -93,8 +134,9 @@
     <!-- Menu lateral decorado com iframe -->
     <div id="menu">
         <iframe src="Menulink.php"  width="100%"></iframe>
+        <a href="../controle/deslogar.php" class="btn btn-gradient">Sair</a><br><br><br><br>
     </div >
-
+ 
 
     <footer> 2024. Biblioteca.</footer>
 
