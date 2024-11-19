@@ -2,7 +2,7 @@ h1 {
     text-shadow: 3px 3px rgb(0, 0, 0);
     text-align: center;
     color: #ffffff;
-}
+} 
 
 a {
     text-decoration: none;
@@ -164,7 +164,7 @@ a{
       }
     
       .login-button {
-        background-color: #9fa5f1;
+        background-color: #0e77da;
         color: white;
         padding: 10px;
         border: none;

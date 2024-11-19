@@ -19,5 +19,5 @@ if (mysqli_num_rows($resultados) == 0) {
     session_start();
     $_SESSION['logado'] = 1;
 
-    header("Location: ../public/home.php");
+    header("Location: ../public/menuprincipal.php");
 }
