@@ -33,36 +33,37 @@
         
         $sql = "SELECT * FROM livro";
         $resultados = mysqli_query($conexao, $sql);
+        
+        $sql = "SELECT 
+        livro.idlivro, livro.titulo, livro.genero, livro.idioma, livro.data_de_publicacao, livro.disponivel, 
+        editora.nome AS editora_nome, 
+        autor.nome AS autor_nome
+        FROM livro  
+        JOIN editora ON livro.editora_ideditora = editora.ideditora
+        JOIN autor ON livro.autor_idautor = autor.idautor";
 
-        while ($linha = mysqli_fetch_array($resultados)) {
-            
-            $id = $linha['idlivro'];
-            $genero = $linha['genero'];
+        $resultados = mysqli_query($conexao, $sql);
+
+            while ($linha = mysqli_fetch_array($resultados)) {
+            $idlivro = $linha['idlivro'];
             $titulo = $linha['titulo'];
-            $disponivel = $linha['disponivel'];
+            $genero = $linha['genero'];
             $idioma = $linha['idioma'];
-            $data_publi = $linha['data_de_publicacao'];
-            $idautor = $linha['autor_idautor'];
-            $ideditora = $linha['editora_ideditora'];
-            if ($disponivel == 1){
-                $dis= 'sim';
-            }
-            else{
-                $dis='não';
-            }
-
-
+            $data_publicacao = $linha['data_de_publicacao'];
+            $disponivel = $linha['disponivel'];
+            $editora_nome = $linha['editora_nome']; // Nome da editora
+            $autor_nome = $linha['autor_nome']; // Nome do autor
 
             echo "<tr>";
-            echo "<td>$id</td>";
-            echo "<td>$genero</td>";
-            echo "<td>$titulo</td>";
-            echo "<td>$dis</td>";
-            echo "<td>$idioma</td>";
-            echo "<td>$data_publi</td>";
-            echo "<td>$idautor</td>";
-            echo "<td>$ideditora</td>";
-            echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
+            echo "<td>{$idlivro}</td>";
+            echo "<td>{$titulo}</td>";
+            echo "<td>{$genero}</td>";
+            echo "<td>{$idioma}</td>";
+            echo "<td>{$data_publicacao}</td>";
+            echo "<td>{$disponivel}</td>";
+            echo "<td>{$editora_nome}</td>";
+            echo "<td>{$autor_nome}</td>";
+            echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$idlivro&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
             echo "</tr>";
         }
 

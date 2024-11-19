@@ -30,4 +30,4 @@ if ($ideditora== 0) {
 mysqli_query($conexao, $sql);
 
 // vai sozinho pro index
-header("Location: ../public/editorasql.php");
+header("Location: ../public/home.php");

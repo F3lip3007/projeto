@@ -31,28 +31,41 @@ require_once "../controle/verificalogado.php";
         $loc = 'emprestimosql.php';
         
 
-        
-        $sql = "SELECT * FROM emprestimo";
-        $resultados = mysqli_query($conexao, $sql);
+                    
+                $sql = "SELECT 
+                emprestimo.idemprestimo,
+                emprestimo.devolucao,
+                emprestimo.dia_do_emprestimo,
+                funcionario.nome AS funcionario_nome,
+                cliente.nome AS cliente_nome,
+                livro.titulo AS livro_titulo
+                FROM 
+                    emprestimo
+                JOIN 
+                    funcionario ON emprestimo.funcionario_idfuncionario = funcionario.idfuncionario
+                JOIN 
+                    cliente ON emprestimo.cliente_idcliente = cliente.idcliente
+                JOIN 
+                    livro ON emprestimo.livro_idlivro = livro.idlivro;
+                ";
+            $resultados = mysqli_query($conexao, $sql);
 
-
-        while ($linha = mysqli_fetch_array($resultados)) {
+            // Loop pelos resultados e geração das linhas da tabela
+            while ($linha = mysqli_fetch_array($resultados)) {
             $id = $linha['idemprestimo'];
             $devolucao = $linha['devolucao'];
             $dia_do_emprestimo = $linha['dia_do_emprestimo'];
-            $funcionario = $linha['funcionario_idfuncionario'];
-            $cliente = $linha["cliente_idcliente"];
-            $livro = $linha["livro_idlivro"];
-
-
+            $funcionario = $linha['funcionario_nome']; // Nome do funcionário
+            $cliente = $linha["cliente_nome"]; // Nome do cliente
+            $livro = $linha["livro_titulo"]; // Título do livro
 
             echo "<tr>";
-            echo "<td>$id</td>";
-            echo "<td>$devolucao</td>";
-            echo "<td>$dia_do_emprestimo</td>";
-            echo "<td>$funcionario</td>";
-            echo "<td>$cliente</td>";
-            echo "<td>$livro</td>";
+            echo "<td>{$id}</td>";
+            echo "<td>{$devolucao}</td>";
+            echo "<td>{$dia_do_emprestimo}</td>";
+            echo "<td>{$funcionario}</td>";
+            echo "<td>{$cliente}</td>";
+            echo "<td>{$livro}</td>";
             echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
             echo "</tr>";
             }

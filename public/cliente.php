@@ -1,15 +1,14 @@
-<div?php
+<?php
 require_once "../controle/verificalogado.php";
 
-require_once "../controle/conexao.php"; // Conexão com o banco de dados
+require_once "../controle/conexao.php"; 
 
-// Verifica se existe um ID passado pela URL
 if (isset($_GET['idcliente'])) {
     $idcliente = $_GET['idcliente'];
     $sql = "SELECT * FROM cliente WHERE idcliente = $idcliente";
-    $resultado = mysqli_query($conexao, $sql);
+    $resultado = mysqli_query($conexao , $sql);
 
-    // Se encontrou o cliente, preenche as variáveis com os dados
+
     if ($linha = mysqli_fetch_array($resultado)) {
         $nome = $linha['nome'];
         $cpf = $linha['cpf'];
@@ -18,7 +17,7 @@ if (isset($_GET['idcliente'])) {
         $botao = "Salvar";
         $titilo="Editar Cliente";
     } else {
-        // Caso o ID não seja encontrado, define valores vazios
+
         $nome = '';
         $cpf = '';
         $telefone = '';
@@ -27,7 +26,6 @@ if (isset($_GET['idcliente'])) {
         $titilo="Cadastro Cliente";
     }
 } else {
-    // Se não existir ID, define como novo cadastro
     $idcliente = 0;
     $nome = '';
     $cpf = '';
@@ -47,7 +45,6 @@ if (isset($_GET['idcliente'])) {
     <title><?php echo $titilo; ?></title>
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
-<>
     <div class ="form-container2"></div>
     <div class = "form-box"></div>
 
