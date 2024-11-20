@@ -2,9 +2,10 @@
 require_once "../controle/verificalogado.php";
 
 require_once "../controle/conexao.php"; 
-if (isset($_GET['idautor'])) {
-    $idcliente = $_GET['idautor'];
-    $sql = "SELECT * FROM autor WHERE idautor = $idautor";
+
+if (isset($_GET['idautor'])) 
+    $id = $_GET['idautor'];
+    $sql = "SELECT * FROM autor WHERE idautor = $id";
     $resultado = mysqli_query($conexao , $sql);
 
 
@@ -20,6 +21,13 @@ if (isset($_GET['idautor'])) {
         $botao = "Cadastrar";
 
     }
+else {
+    $id = 0;
+    $nome = '';
+    $nacionalidade='';
+    $data_de_nascimento = '';
+    $botao = "Cadastrar";
+    $titilo="Cadastro Cliente";
 }
 
 ?>  
@@ -36,7 +44,8 @@ if (isset($_GET['idautor'])) {
 <body>
     <h1> Cadastro do Autor</h1>
 
-     <form action="../controle/autor.php?id=<?php echo $id; ?>" method="post"> 
+     <form action="../controle/editarautor.php?id=<?php echo $id; ?>" method="post"> 
+        <input type="hidden" name="id" value="<?php echo $id; ?>"> <!-- Campo oculto para ID -->
         <h3>Nome do autor:</h3> <br>
         <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>"> <br><br>
 

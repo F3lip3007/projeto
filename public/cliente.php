@@ -2,10 +2,10 @@
 require_once "../controle/verificalogado.php";
 
 require_once "../controle/conexao.php"; 
-
-if (isset($_GET['idcliente'])) {
-    $idcliente = $_GET['idcliente'];
-    $sql = "SELECT * FROM cliente WHERE idcliente = $idcliente";
+// na hora de testar se nao der certo o id testar com o nome ex:id :somente
+if (isset($_GET['idcliente'])) 
+    $id = $_GET['idcliente'];
+    $sql = "SELECT * FROM cliente WHERE idcliente = $id";
     $resultado = mysqli_query($conexao , $sql);
 
 
@@ -25,8 +25,8 @@ if (isset($_GET['idcliente'])) {
         $botao = "Cadastrar";
         $titilo="Cadastro Cliente";
     }
-} else {
-    $idcliente = 0;
+else {
+    $id = 0;
     $nome = '';
     $cpf = '';
     $telefone = '';
@@ -45,30 +45,33 @@ if (isset($_GET['idcliente'])) {
     <title><?php echo $titilo; ?></title>
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
+<body>
+    
+
     <div class ="form-container2"></div>
     <div class = "form-box"></div>
 
     <h1 class ="tituloc"> <?php echo $titilo; ?> </h1>  
        
     <form action="../controle/editarcliente.php" method="POST">
-        <input type="hidden" name="idcliente" value="<?php echo $idcliente; ?>"> <!-- Campo oculto para ID -->
+        <input type="hidden" name="id" value="<?php echo $id; ?>"> <!-- Campo oculto para ID -->
 
     <div class = "form-group">
         <h3>Nome do cliente:</h3>
         <input type="text" placeholder="Nome" name="nome" value="<?php echo $nome; ?>"> <br><br>
-    </div>
+    
 
-    <div class = "form-group">
+
         <h3>Data de nascimento:</h3>
         <input type="date" name="data_de_nascimento" value="<?php echo $data_de_nascimento; ?>"> <br><br>
-    </div>
 
-    <div class = "form-group">
+
+
         <h3>CPF:</h3>
         <input type="text" placeholder="CPF" name="cpf" value="<?php echo $cpf; ?>"><br><br>
-    </div>
 
-    <div class = "form-group">
+
+
         <h3>Telefone:</h3>
         <input type="text" placeholder="Telefone" name="telefone" value="<?php echo $telefone; ?>"><br><br>
     </div>

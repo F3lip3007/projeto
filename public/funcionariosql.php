@@ -52,6 +52,7 @@ require_once "../controle/verificalogado.php";
         echo "<td>$data_de_nascimento</td>";
         echo "<td>$telefone</td>";
         echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
+        echo "<td> <a class = 'letra' href='./funcionario.php?id=$id'>Editar</a><td/>";
         echo "</tr>";
         }
         ?>

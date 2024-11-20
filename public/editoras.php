@@ -5,8 +5,8 @@ require_once "../controle/conexao.php"; // Conexão com o banco de dados
 
 // Verifica se existe um ID passado pela URL
 if (isset($_GET['idcliente'])) {
-    $ideditora = $_GET['idcliente'];
-    $sql = "SELECT * FROM editora WHERE ideditora = $ideditora";
+    $id = $_GET['idcliente'];
+    $sql = "SELECT * FROM editora WHERE ideditora = $id";
     $resultado = mysqli_query($conexao, $sql);
 
     // Se encontrou o cliente, preenche as variáveis com os dados
@@ -24,7 +24,7 @@ if (isset($_GET['idcliente'])) {
     }
 } else {
     // Se não existir ID, define como novo cadastro
-    $ideditora = 0;
+    $id = 0;
     $nome_editora = '';
     $localidade_editora= '';
     $botao = "Cadastrar";
@@ -45,7 +45,7 @@ if (isset($_GET['idcliente'])) {
 <div class = "reto">
 
 <form action="../controle/editareditora.php" method="POST">
-        <input type="hidden" name="ideditora" value="<?php echo $ideditora; ?>"> <!-- Campo oculto para ID -->
+        <input type="hidden" name="id" value="<?php echo $id; ?>"> <!-- Campo oculto para ID -->
 
         <h3>Nome da editora:</h3> <br>
         <input t9pe="text" placeholder="Nome" name="nome_editora"

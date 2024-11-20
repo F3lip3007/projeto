@@ -45,7 +45,7 @@
         $resultados = mysqli_query($conexao, $sql);
 
             while ($linha = mysqli_fetch_array($resultados)) {
-            $idlivro = $linha['idlivro'];
+            $id = $linha['idlivro'];
             $titulo = $linha['titulo'];
             $genero = $linha['genero'];
             $idioma = $linha['idioma'];
@@ -55,7 +55,7 @@
             $autor_nome = $linha['autor_nome']; // Nome do autor
 
             echo "<tr>";
-            echo "<td>{$idlivro}</td>";
+            echo "<td>{$id}</td>";
             echo "<td>{$titulo}</td>";
             echo "<td>{$genero}</td>";
             echo "<td>{$idioma}</td>";
@@ -63,7 +63,8 @@
             echo "<td>{$disponivel}</td>";
             echo "<td>{$editora_nome}</td>";
             echo "<td>{$autor_nome}</td>";
-            echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$idlivro&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
+            echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
+            echo "<td> <a class = 'letra' href='./livros.php?id=$id'>Editar</a><td/>";
             echo "</tr>";
         }
 

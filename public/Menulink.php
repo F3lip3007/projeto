@@ -39,8 +39,8 @@
 <br><br><br><br>
     <a href="funcionario.php" target="conteudo" class="btn btn-gradient">Cadastro Funcionario </a><br><br><br><br>
     <a href="cliente.php" target="conteudo" class="btn btn-gradient">Cadastro Cliente</a><br><br><br><br>
-    <a href="livrosfor.php" target="conteudo" class="btn btn-gradient">Cadastro Livro</a><br><br><br><br>
-    <a href="emprestimofor.php" target="conteudo" class="btn btn-gradient">Cadastro Emprestimo</a><br><br><br><br>
+    <a href="livros.php" target="conteudo" class="btn btn-gradient">Cadastro Livro</a><br><br><br><br>
+    <a href="emprestimo.php" target="conteudo" class="btn btn-gradient">Cadastro Emprestimo</a><br><br><br><br>
     <a href="autor.php" target="conteudo" class="btn btn-gradient">Cadastro Autor</a><br><br><br><br>
     <a href="editoras.php" target="conteudo" class="btn btn-gradient">Cadastro Editoras</a><br><br><br><br>
 

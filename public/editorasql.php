@@ -38,16 +38,16 @@ if (isset($_GET['valor'])) {
         $resultados = mysqli_query($conexao, $sql);
 
             while ($linha = mysqli_fetch_array($resultados)) {
-                $ideditora = $linha['ideditora'];
+                $id = $linha['ideditora'];
                 $nome = $linha['nome'];
                 $localidade = $linha['localidade'];
 
                 echo "<tr>";
-                echo "<td>$ideditora</td>";
+                echo "<td>$id</td>";
                 echo "<td>$nome</td>";
                 echo "<td>$localidade</td>";
-                echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$ideditora&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
-                echo "<td> <a class = 'letra' href='./editoras.php?idcliente=$ideditora'>Editar</a><td/>";
+                echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
+                echo "<td> <a class = 'letra' href='./editoras.php?id=$id'>Editar</a><td/>";
                 echo "</tr>";
             }
             

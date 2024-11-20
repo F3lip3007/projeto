@@ -55,8 +55,8 @@ require_once "../controle/verificalogado.php";
             $id = $linha['idemprestimo'];
             $devolucao = $linha['devolucao'];
             $dia_do_emprestimo = $linha['dia_do_emprestimo'];
-            $funcionario = $linha['funcionario_nome']; // Nome do funcionário
-            $cliente = $linha["cliente_nome"]; // Nome do cliente
+            $funcionario = $linha['funcionario_nome']; 
+            $cliente = $linha["cliente_nome"]; 
             $livro = $linha["livro_titulo"]; // Título do livro
 
             echo "<tr>";
@@ -67,6 +67,7 @@ require_once "../controle/verificalogado.php";
             echo "<td>{$cliente}</td>";
             echo "<td>{$livro}</td>";
             echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
+            echo "<td> <a class = 'letra' href='./emprestimos.php?id=$id'>Editar</a><td/>";
             echo "</tr>";
             }
         ?>
