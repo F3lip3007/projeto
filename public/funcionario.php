@@ -3,8 +3,8 @@ require_once "../controle/verificalogado.php";
 
 require_once "../controle/conexao.php"; 
 // na hora de testar se nao der certo o id testar com o nome ex:id :somente
-if (isset($_GET['idfuncionario'])) 
-    $id = $_GET['idfuncionario'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
     $sql = "SELECT * FROM funcionario WHERE idfuncionario = $id";
     $resultado = mysqli_query($conexao , $sql);
 
@@ -27,7 +27,7 @@ if (isset($_GET['idfuncionario']))
         $botao = "Cadastrar";
         $titilo="Cadastro funcionario";
     }
-else {
+} else {
     $id = 0;
     $nome = '';
     $cpf = '';
@@ -37,6 +37,7 @@ else {
     $botao = "Cadastrar";
     $titilo="Cadastro funcionario";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="PT-br">
@@ -51,6 +52,7 @@ else {
     
     <form action="../controle/editarfuncionario.php" method="post">
     <input type="hidden" name="id" value="<?php echo $id; ?>"> <!-- Campo oculto para ID -->
+    
 
         <h3>Nome do funcionário:</h3><br>
         <input type="text" placeholder="Nome" name="nome" value="<?php echo $nome; ?>"> <br><br>
@@ -62,7 +64,7 @@ else {
         <input type="text" placeholder="CPF"name="cpf" value="<?php echo $cpf; ?>"><br> <br>
 
         <h3>Salário: </h3> <br>
-        <input type="text" placeholder="Salário"name="salario" value="<?php echo $salario; ?>"><br><br>
+        <input type="number" placeholder="Salário"name="salario" value="<?php echo $salario; ?>"><br><br>
 
         <h3>Telefone:</h3><br>
         <input type="text" placeholder="Telefone"name="telefone"value="<?php echo $telefone; ?>" ><br> <br>

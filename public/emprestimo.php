@@ -3,8 +3,8 @@ require_once "../controle/verificalogado.php";
 
 require_once "../controle/conexao.php"; 
 
-if (isset($_GET['idempresctomo'])) 
-    $id = $_GET['idempresctomo'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
     $sql = "SELECT * FROM empresctomo WHERE idempresctomo = $id";
     $resultado = mysqli_query($conexao , $sql);
 
@@ -25,7 +25,7 @@ if (isset($_GET['idempresctomo']))
         $botao = "Cadastrar";
         $titilo="Cadastro Cliente";
     }
-else {
+  }else {
     $id = 0;
     $id = '';
     $devolucao = '';
@@ -51,7 +51,7 @@ else {
 
 
 
-    <form action="../controle/emprestimo.php" method="get">
+    <form action="../controle/editaremprestimo.php" method="get">
     <input type="hidden" name="id" value="<?php echo $id; ?>"> <!-- Campo oculto para ID -->
 
 

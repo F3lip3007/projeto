@@ -67,7 +67,7 @@ require_once "../controle/verificalogado.php";
             echo "<td>{$cliente}</td>";
             echo "<td>{$livro}</td>";
             echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
-            echo "<td> <a class = 'letra' href='./emprestimos.php?id=$id'>Editar</a><td/>";
+            echo "<td> <a class = 'letra' href='./emprestimo.php?id=$id'>Editar</a><td/>";
             echo "</tr>";
             }
         ?>

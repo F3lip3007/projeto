@@ -4,8 +4,8 @@ require_once "../controle/verificalogado.php";
 require_once "../controle/conexao.php"; // Conexão com o banco de dados
 
 // Verifica se existe um ID passado pela URL
-if (isset($_GET['idcliente'])) {
-    $id = $_GET['idcliente'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
     $sql = "SELECT * FROM editora WHERE ideditora = $id";
     $resultado = mysqli_query($conexao, $sql);
 

@@ -1,14 +1,14 @@
 <?php
 require_once "./conexao.php";
 
-$id = $_POST['ideditora'];
+$id = $_POST['id'];
 $nome_editora = $_POST['nome_editora'];
 $localidade_editora = $_POST['localidade_editora'];
 
 
 // echo $nome;
 // echo "<br>";
-// echo $data_de_nascimento;
+// echo $data_de_nascimento;        
 // echo "<br>";
 // echo $cpf;
 // echo "<br>";
@@ -31,4 +31,4 @@ if ($id== 0) {
 mysqli_query($conexao, $sql);
 
 // vai sozinho pro index
-header("Location: ../public/home.php");
+header("Location: ../public/editorasql.php");

@@ -13,7 +13,7 @@ $data_de_nascimento = $_POST['data_de_nascimento'];
 if ($id == 0) {
     // criar um comando SQL que grava no banco
     $sql = "INSERT INTO funcionario (cpf, telefone, nome, data_de_nascimento,salario )
-     VALUES ('cpf', 'telefone', 'nome', 'data_de_nascimento',salario)";
+     VALUES ('$cpf', '$telefone', '$nome', '$data_de_nascimento','$salario')";
 } else {
     $sql = "UPDATE funcionario SET cpf = '$cpf', telefone = '$telefone', nome = '$nome', data_de_nascimento = '$data_de_nascimento' , salario ='$salario' WHERE idfuncionario = '$id'";
 }

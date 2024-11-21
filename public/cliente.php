@@ -3,8 +3,8 @@ require_once "../controle/verificalogado.php";
 
 require_once "../controle/conexao.php"; 
 // na hora de testar se nao der certo o id testar com o nome ex:id :somente
-if (isset($_GET['idcliente'])) 
-    $id = $_GET['idcliente'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
     $sql = "SELECT * FROM cliente WHERE idcliente = $id";
     $resultado = mysqli_query($conexao , $sql);
 
@@ -25,7 +25,7 @@ if (isset($_GET['idcliente']))
         $botao = "Cadastrar";
         $titilo="Cadastro Cliente";
     }
-else {
+}else {
     $id = 0;
     $nome = '';
     $cpf = '';

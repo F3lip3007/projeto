@@ -1,17 +1,18 @@
 <?php
 require_once "./conexao.php";
+$id = $_GET['id'];
+$nome = $_POST['nome'];
+$nacionalidade = $_POST['nacionalidade'];
+$data_de_nascimento = $_POST['data_de_nascimento'];
 
-$nome = $_GET['nome'];
-$nacionalidade = $_GET['nacionalidade'];
-$data_de_nascimento = $_GET['data_de_nascimento'];
 
-
-if ($idautor == 0) {
+if ($id == 0) {
         $sql = "INSERT INTO autor (nome,data_de_nascimento,nacionalidade) 
         VALUES ('$nome','$data_de_nascimento','$nacionalidade')";
 } 
 else {
-        $sql = "UPDATE autor SET nome = '$nome', data_de_nascimento = '$data_de_nascimento', cpf ='$cpf' WHERE idautor= $idautor";
+        $sql = "UPDATE autor SET nome = '$nome', data_de_nascimento = '$data_de_nascimento', nacionalidade ='$nacionalidade' WHERE idautor= $id";
+
 }
 // rodar esse SQL
 mysqli_query($conexao, $sql);
