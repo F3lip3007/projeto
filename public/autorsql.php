@@ -13,7 +13,7 @@ require_once "../controle/verificalogado.php";
 
 <head>
 <body>
-    <h1>Lista autor</h1>
+    <h1>Lista de autor</h1>
     <a class = "letra" href="../controle/pesquisarautor.php" >pesquisar</a>
     <table class= decoracao>
         <tr>

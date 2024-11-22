@@ -19,16 +19,7 @@ if (isset($_GET['id'])) {
         $autor = $linha['autor_idautor']; // Nome do autor
         $botao = "Salvar";
         $titilo = "Editar livro";
-    } else {
-        $titulo = '';
-        $genero = '';
-        $idioma = '';
-        $data_de_publicacao = '';
-        $disponivel = '';
-        $editora = '';
-        $autor = '';
-        $botao = "Cadastrar";
-        $titilo = "Cadastro livro";
+    
     }
 } else {
     $id = 0;
