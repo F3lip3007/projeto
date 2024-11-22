@@ -22,7 +22,8 @@ require_once "../controle/verificalogado.php";
         <th>data de nascimento </th>
         <th>telefone</th>
         <th>deletar</th>
-
+        <th>editar</th>
+        <th>pesquisar</th>
     </tr>
     <?php
         require_once "../controle/conexao.php";
@@ -51,11 +52,12 @@ require_once "../controle/verificalogado.php";
         echo "<td>$salario</td>";
         echo "<td>$data_de_nascimento</td>";
         echo "<td>$telefone</td>";
-        echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
-        echo "<td> <a class = 'letra' href='./funcionario.php?id=$id'>Editar</a><td/>";
+        echo "<td><a class = 'deletar' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'> <img src='./assetslixo.png'</a></td>";
+        echo "<td><a class = 'editar' href='./autor.php?>id=$id'> <img src='./assets/editar.png'</a></td>";
+        echo "<td><a class = 'lupa' href='../controle/pesquisarfuncionario.php'><img src='./assets/lupa.jpg' alt=''></a></td>";
         echo "</tr>";
+
         }
         ?>
-          <a href='../controle/pesquisarfuncionario.php'>pesquisar</a>
 </body>
 </html>

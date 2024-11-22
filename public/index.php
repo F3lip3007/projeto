@@ -41,6 +41,17 @@ if (isset($_SESSION['logado'])){
         <php>
 
     </form>
+    <form action="../controle/usuariohash.php" method="post">
+        <h1>Novo usuário</h1>
+    <h3>E-mail:</h3>
+    <input type="text" name="email" >
+
+    <h3>Senha:</h3>
+    <input type="text"  name="senha">
+    <br><br>
+
+    <input type="submit"    value="cadrastar "  class="btn btn-primary">
+    </form>
 
 
 

@@ -1,225 +1,266 @@
 h1 {
-    text-shadow: 3px 3px rgb(0, 0, 0);
-    text-align: center;
-    color: #ffffff;
-} 
+  text-shadow: 3px 3px rgb(0, 0, 0);
+  text-align: center;
+  color: #ffffff;
+}
 
 
 
 
 a:hover {
-    color: white;
-    background-color: rgb(0, 0, 0);
-    border-color: white;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border-color: white;
 }
 
-body { /* Imagem colorida de fundo */
-    text-align: center;
-    background-image: url('../assets/fundo.jpg');
-    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Impede que a imagem se repita */
+body {
+  /* Imagem colorida de fundo */
+  background-image: url('../assets/fundo.jpg');
+  background-size: cover;
+  /* Ajusta a imagem para cobrir toda a área */
+  background-position: center;
+  /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  /* Impede que a imagem se repita */
 }
 
 
 
 .letra {
-    color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 .login {
-    margin-top: 10%;
+  margin-top: 10%;
 
 }
 
 
 /* vai ser mudado com java */
-td{
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-
-}
-table{
-    border-width: 2px;
-    border-style: solid;
-    border-color: black;
-
+td {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
 
 }
 
-a{
-    box-sizing: border-box;
-  }
-  
-  a {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Style the side navigation */
-  .sidenav {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-  }
-  
-  
-  /* Side navigation links */
-  .sidenav a {
-    color: white;
-    padding: 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color on hover */
-  .sidenav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Style the content */
-  .content {
-    margin-left: 200px;
-    padding-left: 20px;
-  }
-  
- .decoracao{
-  font-family: Arial, Helvetica, sans-serif; /*fonte do texto*/
-  border-collapse: collapse;/*tipo de borda*/
+table {
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+
+
+}
+
+a {
+  box-sizing: border-box;
+}
+
+a {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+
+.decoracao {
+  font-family: Arial, Helvetica, sans-serif;
+  /*fonte do texto*/
+  border-collapse: collapse;
+  /*tipo de borda*/
   width: 100%;
-  }
-
-  .decoracao td, .decoracao th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  .decoracao tr:nth-child(even){background-color: #f2f2f2;}
-  
-  .decoracao tr:hover {background-color: #ddd;}
-  
-  .decoracao th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #415dc3;
-    color: white;
-  }
-
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   width: 100%;
 }
 
-  .login-box {
-    background: rgba(255, 255, 255, 0.1);  /*FUNDO TRANSLUCIDO */
-    border-radius: 12px;
-    padding: 20px 30px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-    text-align: center;
-    width: 300px;
-    backdrop-filter: blur(10px); /*efeito de vidro fosco */
+.decoracao td,
+.decoracao th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 
-  }
+.decoracao tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-  .user-icon {
-    background: white; 
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.decoracao tr:hover {
+  background-color: #ddd;
+}
 
-  .user-icon::before {
-   content: "👤"; 
-   font-family: "Glyphicons Halflings"; 
-   font-size: 60px;
-   color: white;
-  }
+.decoracao th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #415dc3;
+  color: white;
+}
 
-    .input-field {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-    
-      .login-button {
-        background-color: #0e77da;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        width: 100%;
-      }
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-      .options a {
-        text-decoration: none;
-        color: black;
-      }
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  /*FUNDO TRANSLUCIDO */
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 600px;
+  backdrop-filter: blur(10px);
+  /*efeito de vidro fosco */
 
-      .login-button:hover { 
-        background-color: #7b7b7b;
-      }
+}
 
-    .titulobv {
-      text-align: center;
-      font-style: italic;
+.user-icon {
+  background: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-icon::before {
+  content: "👤";
+  font-family: "Glyphicons Halflings";
+  font-size: 60px;
+  color: white;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-button {
+  background-color: #0e77da;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.options a {
+  text-decoration: none;
+  color: black;
+}
+
+.login-button:hover {
+  background-color: #7b7b7b;
+}
+
+.titulobv {
+  text-align: center;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Fauna One', serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+
+
+  .lupa{
+    img {
+      width: 5%; /* A imagem terá 50% da largura original */
+      height: auto; /* A altura será ajustada automaticamente para manter a proporção */
     }
-    *{
-      box-sizing: border-box;
-    }
     
-    body {
-      margin: 0;
-      font-family:'Fauna One', serif;
-    }
-    /* Style the side navigation */
-    .sidenav {
-      height: 100%;
-      width: 200px;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #111;
-      overflow-x: hidden;
-    }
-    
-    
-    /* Side navigation links */
-    .sidenav a {
-      color: white;
-      padding: 16px;
-      text-decoration: none;
-      display: block;
-    }
-    
-    /* Change color on hover */
-    .sidenav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-    
-    /* Style the content */
-    .content {
-      margin-left: 200px;
-      padding-left: 20px;
+
+}
+
+  .editar{
+    img {
+      width: 5%; /* A imagem terá 50% da largura original */
+      height: auto; /* A altura será ajustada automaticamente para manter a proporção */
     }
   
+}
+  .deletar{
+    img {
+      width: 5%; /* A imagem terá 50% da largura original */
+      height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+    }
+
+  }
+

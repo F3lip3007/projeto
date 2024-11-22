@@ -13,6 +13,8 @@ $sql = "INSERT INTO usuario (email, senha) VALUES ('$email', '$senhaHash')";
 
 mysqli_query($conexao, $sql);
 
+header("Location: ../public/index.php");
+
 
 
 ?>

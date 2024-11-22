@@ -1,5 +1,5 @@
 <?php
-require_once "../controle/verificalogado.php";
+// require_once "../controle/verificalogado.php";
 
 require_once "../controle/conexao.php"; 
 ?>

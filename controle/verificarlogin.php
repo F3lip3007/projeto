@@ -27,7 +27,7 @@ if (mysqli_num_rows($resultados) == 0) {
         header("Location: ../public/menuprincipal.php");
     } 
     else {
-        header("Location: ../public/menuprincipal.php");
+        header("Location: ../public/menuprincipal,php");
     }
 }
 

@@ -20,7 +20,8 @@ require_once "../controle/verificalogado.php";
             <th>nacionalidade</th>
             <th>data_de_nascimento</th>
             <th>deletar</th>
-            <th>editar</th>
+            <th >editar</th>
+            <th >Pesquisar</th>
     
         </tr>
         <?php
@@ -55,12 +56,15 @@ require_once "../controle/verificalogado.php";
             echo "<td>$nome</td>";
             echo "<td>$nacionalidade</td>";
             echo "<td>$nascimento</td>";
-            echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>deletar</a><td/>";
-            echo "<td> <a class = 'letra' href='./autor.php?id=$id'>Editar</a><td/>";
+            echo "<td> 
+            <a class = 'deletar' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'> <img src='./assets/lixo.png'</a>
+            </td>";
+            echo "<td> <a class = 'editar' href='./autor.php?>id=$id'> <img src='./assets/editar.png'</a><td/>";
+            echo "<td>  <a class = 'lupa' href='../controle/pesquisarautor.php'><img src='./assets/lupa.jpg' alt=''>
+            </a><td/>";
             echo "</tr>";
 
         }
         ?>
-
 </body>
 </html>
