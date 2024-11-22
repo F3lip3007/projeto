@@ -8,7 +8,9 @@ require_once "../controle/verificalogado.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/table-style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 <head>
 <body>
     <h1>Lista autor</h1>
@@ -57,11 +59,21 @@ require_once "../controle/verificalogado.php";
             echo "<td>$nacionalidade</td>";
             echo "<td>$nascimento</td>";
             echo "<td> 
-            <a class = 'deletar' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'> <img src='./assets/lixo.png'</a>
+            <a class='deletar' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'> 
+            <i class='fas fa-trash'></i>
+            </a>
             </td>";
-            echo "<td> <a class = 'editar' href='./autor.php?>id=$id'> <img src='./assets/editar.png'</a><td/>";
-            echo "<td>  <a class = 'lupa' href='../controle/pesquisarautor.php'><img src='./assets/lupa.jpg' alt=''>
-            </a><td/>";
+            echo "<td> 
+            <a class='editar' href='./autor.php?id=$id'> 
+            <i class='fas fa-edit'></i>
+            </a>
+            </td>";
+            echo "<td>  
+            <a class='lupa' href='../controle/pesquisarautor.php'>
+            <i class='fas fa-search'></i>
+            </a>
+            </td>";
+            
             echo "</tr>";
 
         }

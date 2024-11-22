@@ -1,38 +1,42 @@
 <?php
 require_once "../controle/verificalogado.php";
 
-?>  
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/estilo.css">
-</head>
-<body>
-<h1>Lista de Empréstimos</h1>
-<a href='../controle/pesquisaremprestimo.php'>pesquisar</a>
-<table class= decoracao >
-    <tr>
-        <th>id empréstimo</th>
-        <th>devolução</th>
-        <th>dia do empréstimo</th>           
-        <th>funcionario id funcionario</th>
-        <th>cliente id cliente </th>
-        <th>livro id livro</th>
-        <th>deletar</th>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/table-style.css">
 
-    </tr>
-    <?php
-        require_once "../controle/conexao.php";
-        $campo = 'idemprestimo';
-        $tabela= 'emprestimo';
-        $loc = 'emprestimosql.php';
-        
+    <head>
 
-                    
-                $sql = "SELECT 
+    <body>
+        <h1>Lista de Empréstimos</h1>
+        <a href='../controle/pesquisaremprestimo.php'>pesquisar</a>
+        <table class=decoracao>
+            <tr>
+                <th>id empréstimo</th>
+                <th>devolução</th>
+                <th>dia do empréstimo</th>
+                <th>funcionario id funcionario</th>
+                <th>cliente id cliente </th>
+                <th>livro id livro</th>
+                <th colspan="2">deletar</th>
+
+            </tr>
+            <?php
+            require_once "../controle/conexao.php";
+            $campo = 'idemprestimo';
+            $tabela = 'emprestimo';
+            $loc = 'emprestimosql.php';
+
+
+
+            $sql = "SELECT 
                 emprestimo.idemprestimo,
                 emprestimo.devolucao,
                 emprestimo.dia_do_emprestimo,
@@ -52,25 +56,32 @@ require_once "../controle/verificalogado.php";
 
             // Loop pelos resultados e geração das linhas da tabela
             while ($linha = mysqli_fetch_array($resultados)) {
-            $id = $linha['idemprestimo'];
-            $devolucao = $linha['devolucao'];
-            $dia_do_emprestimo = $linha['dia_do_emprestimo'];
-            $funcionario = $linha['funcionario_nome']; 
-            $cliente = $linha["cliente_nome"]; 
-            $livro = $linha["livro_titulo"]; // Título do livro
+                $id = $linha['idemprestimo'];
+                $devolucao = $linha['devolucao'];
+                $dia_do_emprestimo = $linha['dia_do_emprestimo'];
+                $funcionario = $linha['funcionario_nome'];
+                $cliente = $linha["cliente_nome"];
+                $livro = $linha["livro_titulo"]; // Título do livro
 
-            echo "<tr>";
-            echo "<td>{$id}</td>";
-            echo "<td>{$devolucao}</td>";
-            echo "<td>{$dia_do_emprestimo}</td>";
-            echo "<td>{$funcionario}</td>";
-            echo "<td>{$cliente}</td>";
-            echo "<td>{$livro}</td>";
-            echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
-            echo "<td> <a class = 'letra' href='./emprestimo.php?id=$id'>Editar</a><td/>";
-            echo "</tr>";
+                echo "<tr>";
+                echo "<td>{$id}</td>";
+                echo "<td>{$devolucao}</td>";
+                echo "<td>{$dia_do_emprestimo}</td>";
+                echo "<td>{$funcionario}</td>";
+                echo "<td>{$cliente}</td>";
+                echo "<td>{$livro}</td>";
+                echo "<td><a class='letra editora' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>
+<i class='fas fa-trash lixo'></i> Deletar
+</a></td>";
+
+                echo "<td><a class='letra editora-editar' href='./emprestimo.php?id=$id'>
+<i class='fas fa-edit editar'></i> Editar
+</a></td>";
+
+                echo "</tr>";
             }
-        ?>
-         
-</body>
+            ?>
+
+    </body>
+
 </html>

@@ -8,8 +8,10 @@ require_once "../controle/verificalogado.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/estilo.css">
-</head>
+    <link rel="stylesheet" href="./css/table-style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<head>
 <body>
     <h1>Lista de clientes</h1>
     <a class = "letra" href="../controle/pesquisarcliente.php" >pesquisar</a>
@@ -21,7 +23,7 @@ require_once "../controle/verificalogado.php";
             <th>nome</th>
             <th>data de nascimento</th>
             <th>deletar</th>
-            <th>editar</th>
+            <th colspan="2">editar</th>
 
         </tr>
 
@@ -65,8 +67,17 @@ require_once "../controle/verificalogado.php";
                 echo "<td>$nome</td>";
                 echo "<td>$telefone</td>";
                 echo "<td>$nascimento</td>";
-                echo "<td> <a class = 'letra' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'>Deletar</a><td/>";
-                echo "<td> <a class = 'letra' href='./cliente.php?id=$id'>Editar</a><td/>";
+                echo "<td> 
+                <a class='deletar' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'> 
+                <i class='fas fa-trash'></i> Deletar
+                </a>
+                </td>";
+                echo "<td> 
+                <a class='editar' href='./cliente.php?id=$id'> 
+                <i class='fas fa-edit'></i> Editar
+                </a>
+                </td>";
+                
                 echo "</tr>";
             }
             

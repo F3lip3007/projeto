@@ -9,7 +9,7 @@ require_once "../controle/conexao.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>usuario</title>
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/form-style.css">
 </head>
 <body>
 <form action="../controle/usuariohash.php" method="post">

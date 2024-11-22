@@ -1,0 +1,99 @@
+/* Estilo geral da tabela */
+table.decoracao {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Cabeçalho da tabela */
+table.decoracao th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: left;
+    padding: 10px 15px;
+    border-bottom: 2px solid #34495e;
+}
+
+/* Linhas da tabela */
+table.decoracao td {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+/* Estilo das linhas alternadas */
+table.decoracao tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table.decoracao tr:nth-child(odd) {
+    background-color: #ecf0f1;
+}
+
+/* Efeito ao passar o mouse */
+table.decoracao tr:hover {
+    background-color: #d5e4eb;
+    transition: background-color 0.2s ease;
+}
+
+/* Estilo dos links nas ações (deletar, editar, pesquisar) */
+table.decoracao a {
+    display: inline-block;
+    padding: 5px 8px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Estilo para os ícones */
+table.decoracao a i {
+    font-size: 1.2rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Estilos específicos para os links */
+table.decoracao a.deletar, .editora, .lixo {
+    background-color: #e74c3c;
+}
+
+table.decoracao a.deletar:hover, .editora, .lixo:hover {
+    background-color: #c0392b;
+}
+
+table.decoracao a.editar, .editora-editar, .editar {
+    background-color: #f1c40f;
+}
+
+table.decoracao a.editar:hover, .editora-editar, .editar:hover {
+    background-color: #d4ac0d;
+}
+
+table.decoracao a.lupa {
+    background-color: #2980b9;
+}
+
+table.decoracao a.lupa:hover {
+    background-color: #21618c;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    table.decoracao {
+        font-size: 0.8rem;
+    }
+
+    table.decoracao th, table.decoracao td {
+        padding: 8px 10px;
+    }
+}

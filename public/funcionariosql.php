@@ -8,8 +8,10 @@ require_once "../controle/verificalogado.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/estilo.css">
-</head>
+    <link rel="stylesheet" href="./css/table-style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<head>
 <body>
 <h1>Lista de Funcionários</h1>
 
@@ -52,9 +54,18 @@ require_once "../controle/verificalogado.php";
         echo "<td>$salario</td>";
         echo "<td>$data_de_nascimento</td>";
         echo "<td>$telefone</td>";
-        echo "<td><a class = 'deletar' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'> <img src='./assetslixo.png'</a></td>";
-        echo "<td><a class = 'editar' href='./autor.php?>id=$id'> <img src='./assets/editar.png'</a></td>";
-        echo "<td><a class = 'lupa' href='../controle/pesquisarfuncionario.php'><img src='./assets/lupa.jpg' alt=''></a></td>";
+        echo "<td><a class='deletar' href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc'> 
+<i class='fas fa-trash'></i> Deletar
+</a></td>";
+
+echo "<td><a class='editar' href='./autor.php?id=$id'> 
+<i class='fas fa-edit'></i> Editar
+</a></td>";
+
+echo "<td><a class='lupa' href='../controle/pesquisarfuncionario.php'>
+<i class='fas fa-search'></i> Pesquisar
+</a></td>";
+
         echo "</tr>";
 
         }
