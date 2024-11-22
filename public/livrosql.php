@@ -62,13 +62,22 @@ require_once "../controle/conexao.php";
             $editora_nome = $linha['editora_nome']; // Nome da editora
             $autor_nome = $linha['autor_nome']; // Nome do autor
 
+
+            if ($disponivel ==1) {
+                $disponivelnome= 'sim';
+            }
+            else{
+                $disponivelnome= 'não';
+            }
+
+
             echo "<tr>";
             echo "<td>{$id}</td>";
             echo "<td>{$titulo}</td>";
             echo "<td>{$genero}</td>";
             echo "<td>{$idioma}</td>";
             echo "<td>{$data_publicacao}</td>";
-            echo "<td>{$disponivel}</td>";
+            echo "<td>{$disponivelnome}</td>";
             echo "<td>{$editora_nome}</td>";
             echo "<td>{$autor_nome}</td>";
             echo "<td> 

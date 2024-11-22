@@ -1,5 +1,6 @@
 <?php
-require_once "./conexao.php";
+require_once "../controle/conexao.php";
+
 $id = $_GET['id'];
 $nome = $_POST['nome'];
 $nacionalidade = $_POST['nacionalidade'];

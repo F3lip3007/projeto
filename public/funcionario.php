@@ -50,8 +50,8 @@ if (isset($_GET['id'])) {
 <body>
     <h1 class ="tituloc"> <?php echo $titilo; ?> </h1>  
     
-    <form action="../controle/editarfuncionario.php" method="post">
-    <input type="hidden" name="id" value="<?php echo $id; ?>"> <!-- Campo oculto para ID -->
+    <form action="../controle/editarfuncionario.php" method="POST">
+        <input type="hidden" name="id" value="<?php echo $id; ?>"> <!-- Campo oculto para ID -->
     
 
         <h3>Nome do funcionário:</h3><br>

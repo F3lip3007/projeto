@@ -18,7 +18,7 @@ $livro = $_POST['livro'];
 
 if ($id == 0) {
     $sql = "INSERT INTO emprestimo (devolucao,funcionario_idfuncionario,cliente_idcliente,livro_idlivro) 
-    VALUES ('$devolucao',$funcionario,$cliente,$livro)";
+    VALUES ('$devolucao','$funcionario','$cliente','$livro')";
 } else {
     $sql = "UPDATE emprestimo SET devolucao = '$devolucao', funcionario_idfuncionario = $funcionario, cliente_idcliente =$cliente,livro_idlivro =$livro WHERE idemprestimo = $id";
 }

@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
     $cliente = $linha["cliente_idcliente"];
     $livro = $linha["livro_idlivro"];
     $botao = "Salvar";
-    $titilo = "Editar Cliente";
+    $titilo = "Editar Emprestimo";
   } else {
     $id = 0;
     $devolucao = '';
@@ -26,7 +26,7 @@ if (isset($_GET['id'])) {
     $cliente = '';
     $livro = '';
     $botao = "Cadastrar";
-    $titilo = "Cadastro Cliente";
+    $titilo = "Cadastro Emprestimo";
   }
 }
 else {
@@ -37,7 +37,7 @@ else {
   $cliente = '';
   $livro = '';
   $botao = "Cadastrar";
-  $titilo = "Cadastro Cliente";
+  $titilo = "Cadastro Emprestimo";
 }
 ?>
 
