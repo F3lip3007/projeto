@@ -1,6 +1,6 @@
 <?php
 require_once "./conexao.php";
-
+$id = $_POST['id'];
 $devolucao = $_POST['devolucao'];
 $funcionario = $_POST['funcionario'];
 $cliente = $_POST['cliente'];
@@ -17,10 +17,10 @@ $livro = $_POST['livro'];
 
 
 if ($id == 0) {
-    $sql = "INSERT INTO emprestimo ('devolucao','funcionario_idfuncionario',cliente_idcliente,livro_idlivro) 
-    VALUES ('$devolucao','$funcionario','$cliente','$livro')";
+    $sql = "INSERT INTO emprestimo (devolucao,funcionario_idfuncionario,cliente_idcliente,livro_idlivro) 
+    VALUES ('$devolucao',$funcionario,$cliente,$livro)";
 } else {
-    $sql = "UPDATE emprestimo SET devolucao = '$devolucao', 'funcionario_idfuncionario' = $funcionario', cliente_idcliente' ='$cliente','livro_idlivro '='$livro' WHERE idemprestimo = $id";
+    $sql = "UPDATE emprestimo SET devolucao = '$devolucao', funcionario_idfuncionario = $funcionario, cliente_idcliente =$cliente,livro_idlivro =$livro WHERE idemprestimo = $id";
 }
 // rodar esse SQL
 mysqli_query($conexao, $sql);

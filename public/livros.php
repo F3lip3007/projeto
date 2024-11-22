@@ -112,8 +112,24 @@ if (isset($_GET['id'])) {
 
       
         <h3>disponivel: </h3>
-        <input type='radio' name='disponivel' value="1">sim<br><br>
-        <input type='radio' name='disponivel' value="0">não<br><br>
+        <?php
+            if ($disponivel== 0) {
+                echo "<input type='radio' name='disponivel value='1' checked>sim<br><br>";
+                echo "<input type='radio' name='disponivel' value='0'>não<br><br>";
+              }
+              else if ($disponivel == 1) {
+                echo "<input type='radio' name='disponivel value='1'>sim<br><br>";
+                echo "<input type='radio' name='disponivel' value='0' checked>não<br><br>";
+              }
+              else {
+                echo "<input type='radio' name='disponivel value='1'>sim<br><br>";
+                echo "<input type='radio' name='disponivel' value='0'>não<br><br>";
+              }
+        ?>
+        <!-- <input type='radio' name='disponivel' value="1">sim<br><br>
+        <input type='radio' name='disponivel' value="0">não<br><br> -->
+
+     
             
         <input type="submit" class ="btn-registrer" value="<?php echo $botao; ?>">
     </form>
