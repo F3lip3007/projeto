@@ -4,7 +4,7 @@ require_once "./conexao.php";
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$sql = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
+$sql = "SELECT * FROM usuario WHERE email = '$email'";
 
 $resultados = mysqli_query($conexao, $sql);
 
@@ -14,10 +14,20 @@ if (mysqli_num_rows($resultados) == 0) {
     // ou informou dados errados.
     header("Location: ../public/index.php");
 } else {
-    // pode acessar.
-    
-    session_start();
-    $_SESSION['logado'] = 1;
+    $linha = mysqli_fetch_array($resultados);
+    $senhaHash = $linha['senha'];
 
-    header("Location: ../public/menuprincipal.php");
+    // verdadeiro ou falso
+    if (password_verify($senha, $senhaHash) == true) {
+        // pode acessar.
+        session_start();
+        $_SESSION['logado'] = 1;
+
+ 
+        header("Location: ../public/menuprincipal.php");
+    } 
+    else {
+        header("Location: ../public/menuprincipal.php");
+    }
 }
+

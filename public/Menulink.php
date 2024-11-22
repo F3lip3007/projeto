@@ -43,6 +43,7 @@
     <a href="emprestimo.php" target="conteudo" class="btn btn-gradient">Cadastro Emprestimo</a><br><br><br><br>
     <a href="autor.php" target="conteudo" class="btn btn-gradient">Cadastro Autor</a><br><br><br><br>
     <a href="editoras.php" target="conteudo" class="btn btn-gradient">Cadastro Editoras</a><br><br><br><br>
+    <a href="usuario.php" target="conteudo" class="btn btn-gradient">Cadastro usuario</a><br><br><br><br>
 
     <a href="funcionariosql.php" target="conteudo" class="btn btn-gradient">Listar Funcionario</a><br><br><br><br>
     <a href="clientesql.php" target="conteudo" class="btn btn-gradient">Listar Cliente</a><br><br><br><br>
