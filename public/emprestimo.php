@@ -5,21 +5,23 @@ require_once "../controle/conexao.php";
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM empresctomo WHERE idempresctomo = $id";
+    $sql = "SELECT * FROM emprestimo WHERE idemprestimo = $id";
     $resultado = mysqli_query($conexao , $sql);
 
 
     if ($linha = mysqli_fetch_array($resultado)) {
       $id = $linha['idemprestimo'];
       $devolucao = $linha['devolucao'];
-      $funcionario = $linha['funcionario_nome']; 
-      $cliente = $linha["cliente_nome"]; 
-      $livro = $linha["livro_titulo"];
-        $botao = "Salvar";
+      $funcionario = $linha['funcionario_idfuncionario'];
+      $dia_do_emprestimo = $linha['dia_do_emprestimo'];  
+      $cliente = $linha["cliente_idcliente"]; 
+      $livro = $linha["livro_idlivro"];
+      $botao = "Salvar";
         $titilo="Editar Cliente";
     } else {
         $devolucao = '';
         $funcionario = '';
+        $dia_do_emprestimo = '';
         $cliente='';
         $livro='';
         $botao = "Cadastrar";
@@ -30,6 +32,7 @@ if (isset($_GET['id'])) {
     $id = '';
     $devolucao = '';
     $funcionario = '';
+    $dia_do_emprestimo = '';
     $cliente='';
     $livro='';
     $botao = "Cadastrar";

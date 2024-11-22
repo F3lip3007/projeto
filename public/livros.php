@@ -56,7 +56,7 @@ if (isset($_GET['id'])) {
 
 
 
-    <form action="../controle/livros.php" method="post">
+    <form action="../controle/editarlivros.php" method="post">
     <input type="hidden" name="id" value="<?php echo $id; ?>"> <!-- Campo oculto para ID -->
 
        

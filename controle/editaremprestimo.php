@@ -26,5 +26,5 @@ if ($id == 0) {
 mysqli_query($conexao, $sql);
 
 // vai sozinho pro index
-header("Location: ../public/clientesql.php");
+header("Location: ../public/emprestimosql.php");
 ?>
