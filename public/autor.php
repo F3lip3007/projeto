@@ -30,12 +30,12 @@ if (isset($_GET['id'])) {
     $data_de_nascimento = '';
     $botao = "Cadastrar";
     $titilo="Cadastro Autor";
-    echo'cuu';
+    
 }
 
 ?>  
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-br">
 
 <head>
     <meta charset="UTF-8">

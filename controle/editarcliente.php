@@ -25,3 +25,4 @@ mysqli_query($conexao, $sql);
 
 // vai sozinho pro index
 header("Location: ../public/clientesql.php");
+?>
