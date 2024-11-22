@@ -41,13 +41,13 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-widtV, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/form-style.css">
 </head>
 
 <body>
     <h1> <?php echo($titilo);?></h1>
 
-     <form action="../controle/editarautor.php?id=<?php echo $id; ?>" method="post"> 
+    <form action="../controle/editarautor.php?id=<?php echo $id; ?>" method="post"> 
         <input type="hidden" name="id" value="<?php echo $id; ?>"> <!-- Campo oculto para ID -->
         <h3>Nome do autor:</h3> <br>
         <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>"> <br><br>

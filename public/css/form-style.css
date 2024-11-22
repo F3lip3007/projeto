@@ -1,0 +1,153 @@
+/* ======================== */
+/* Estilo Geral do Formulário */
+/* ======================== */
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef); /* Tons suaves de cinza */
+    border: 2px solid #ced4da;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* ======================== */
+/* Estilo dos Títulos */
+/* ======================== */
+form h3 {
+    font-size: 1.2rem;
+    color: #495057; /* Cinza-escuro para contraste */
+    margin-bottom: 10px;
+}
+
+/* ======================== */
+/* Campos de Entrada */
+/* ======================== */
+form input[type="text"],
+form input[type="date"],
+form input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #343a40; /* Cinza quase preto */
+    background-color: #f8f9fa; /* Fundo claro */
+    border: 1px solid #ced4da; /* Cinza médio */
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus {
+    outline: none;
+    background-color: #e9ecef; /* Fundo levemente mais escuro no foco */
+    border-color: #6c757d; /* Cinza-escuro */
+}
+
+/* ======================== */
+/* Campos de Seleção */
+/* ======================== */
+form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #343a40;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+form select:focus {
+    outline: none;
+    background-color: #e9ecef;
+    border-color: #6c757d;
+}
+
+form select option {
+    padding: 10px;
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+form select option:hover {
+    background-color: #e9ecef;
+    color: #343a40;
+}
+
+/* ======================== */
+/* Botões */
+/* ======================== */
+form input[type="submit"],
+form .btn-registrer {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: #ffffff; /* Texto branco */
+    background: linear-gradient(145deg, #007bff, #0056b3); /* Tons de azul profissional */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover,
+form .btn-registrer:hover {
+    background: linear-gradient(145deg, #0056b3, #004085); /* Azul mais escuro no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ======================== */
+/* Botões de Rádio */
+/* ======================== */
+form .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #495057;
+}
+
+form .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+form .radio-group input[type="radio"] {
+    accent-color: #007bff; /* Azul para botões de rádio */
+    transform: scale(1.2);
+    margin-right: 8px;
+    transition: transform 0.2s ease;
+}
+
+form .radio-group input[type="radio"]:hover {
+    transform: scale(1.3);
+}
+
+form .radio-group input[type="radio"]:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 4px;
+}
+
+/* ======================== */
+/* Ajustes Gerais */
+/* ======================== */
+form .form-control {
+    margin-bottom: 15px;
+    color: #495057;
+}
+
+form br {
+    display: none;
+}

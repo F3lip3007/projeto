@@ -37,7 +37,7 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $titilo; ?></title>
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/form-style.css">
 </head>
 <body>
     <h1> <?php echo $titilo; ?></h1>
@@ -48,7 +48,7 @@ if (isset($_GET['id'])) {
         <input type="hidden" name="id" value="<?php echo $id; ?>"> <!-- Campo oculto para ID -->
 
         <h3>Nome da editora:</h3> <br>
-        <input t9pe="text" placeholder="Nome" name="nome_editora"
+        <input type="text" placeholder="Nome" name="nome_editora"
         value="<?php echo $nome_editora; ?>"> <br><br>
 
         <h3>Localidade da empresa:</h3><br>
